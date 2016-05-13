@@ -19,7 +19,7 @@
 
 	    <script src="/<?php echo BASE; ?>estaticos/functions.js"></script>
 
-        <title>PROJETO</title>
+        <title>CliniSoftware</title>
     </head>
     <body>
         <!-- Wrap all page content here -->
