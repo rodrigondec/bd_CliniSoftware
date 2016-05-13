@@ -1,7 +1,7 @@
 <?php
 	//XAMPP && C9
 	define('ARQUIVOS', $_SERVER['DOCUMENT_ROOT']);
-	define('BASE', 'ITDev/'); // XAMPP
+	define('BASE', 'CliniSoftware/'); // XAMPP
 	// define('BASE', ''); // C9
 	define('TEMPLATES', ARQUIVOS.'/'.BASE.'templates/');
 	
