@@ -1,0 +1,106 @@
+/* Sticky footer styles */
+
+html,
+body {
+    height: 100%;
+    /* The html and body elements cannot have any padding or margin. */
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+    min-height: 100%;
+    height: auto;
+    /* Negative indent footer by its height */
+    margin: 0 auto -60px;
+    /* Pad bottom by footer height */
+    padding: 0 0 60px;
+}
+
+/* Set the fixed height of the footer here */
+#footer {
+    height: 60px;
+    background-color: #f5f5f5;
+}
+
+/* END Sticky footer styles  */
+
+
+
+.centered-20 {
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.centered-30 {
+    padding-left: 30%;
+    padding-right: 30%;
+}
+
+.centered-35 {
+    padding-left: 35%;
+    padding-right: 35%;
+}
+
+.centered-40 {
+    padding-left: 40%;
+    padding-right: 40%;
+}
+
+.header-2 {
+    padding-top: 5%;
+    padding-bottom: 4%;
+}
+
+.header-3 {
+    padding-top: 5%;
+    padding-bottom: 2%;
+}
+
+.inline{
+    display: inline;
+}
+
+.fa-caret-right{
+    padding-left: 3%;
+}
+
+.resizable {
+    resize: both;
+    overflow: auto;
+}
+
+.center {
+    float: none;
+    margin: 0 auto;
+}
+
+.table-striped > tbody > tr:nth-child(odd) > td{
+    background-color: #f3f3f3;
+}
+
+.table-hover > tbody > tr:hover > td{
+    background-color: #eaeaea;
+}
+
+.dropdown-submenu {
+  	position: relative;
+}
+.dropdown-submenu > .dropdown-menu {
+  	top: 0;
+  	left: 100%;
+  	margin-top: -6px;
+  	margin-left: -1px;
+}
+.dropdown-submenu:hover > .dropdown-menu {
+  	display: block;
+}
+.dropdown-submenu:hover > a:after {
+  	border-left-color: #fff;
+}
+.dropdown-submenu.pull-left {
+  	float: none;
+}
+.dropdown-submenu.pull-left > .dropdown-menu {
+  	left: -100%;
+  	margin-left: 10px;
+}
