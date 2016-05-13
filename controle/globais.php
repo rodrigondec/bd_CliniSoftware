@@ -6,13 +6,8 @@
 	define('TEMPLATES', ARQUIVOS.'/'.BASE.'templates/');
 	
 	define('LOGIN', ARQUIVOS.'/'.BASE.'login.php');
-	define('CONFIGS', ARQUIVOS.'/'.BASE.'configs/configs.php');
-	
-	define('ADMIN', '/'.BASE.'index.php/admin/');
-	define('HOSPITAL', '/'.BASE.'index.php/hospital/');
+
 	define('SISTEMA', '/'.BASE.'index.php/sistema/');
-
-
 
 	define('DB_NAME', 'name'); //Mudar para o nome do banco
 	define('DB_USER', 'root');
