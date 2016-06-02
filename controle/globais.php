@@ -1,5 +1,4 @@
 <?php
-
 	define('ARQUIVOS', $_SERVER['DOCUMENT_ROOT']);
 	define('BASE', 'CliniSoftware/'); // XAMPP
 	define('TEMPLATES', ARQUIVOS.'/'.BASE.'templates/');
@@ -16,6 +15,12 @@
 	define('LINK', mysql_connect(DB_HOST, DB_USER, DB_PASS));
 	mysql_select_db(DB_NAME, LINK);
 	mysql_set_charset('utf8', LINK);
+
+	// var_dump(DB_NAME);echo '<br>';
+	// var_dump(DB_USER);echo '<br>';
+	// var_dump(DB_PASS);echo '<br>';
+	// var_dump(DB_HOST);echo '<br>';
+	// var_dump(LINK);
 
 	ob_start(); //Criando Buffer
 	session_start();
