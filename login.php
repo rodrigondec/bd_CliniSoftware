@@ -1,9 +1,45 @@
 <?php 
-	var_dump($_POST);
 	if(count($_POST) > 0){
 
-		if($usuario && $usuario['senha'] == md5($_POST['senha'])){
+		$idpessoa = select('idpessoa', 'pessoa', 'email', $_POST['email'])['idpessoa'];
+		$senha = select('senha', 'usuario', 'idpessoa', $idpessoa)['senha'];
+
+		// if($usuario && $usuario['senha'] == md5($_POST['senha'])){
+		if($senha && $senha == $_POST['senha']){
+
 			session_start();
+			$_SESSION['idpessoa'] = $idpessoa;
+			
+			$idmedico = null;
+			$idrecepcionista = null;
+			$idadministrador = null;
+
+			$idpaciente = select('idpaciente', 'paciente', 'idpessoa', $_SESSION['idpessoa'])['idpaciente'];
+			if($idpaciente){
+				$_SESSION['idpaciente'] = $idpaciente;
+			}
+
+			$idfuncionario = select('idfuncionario', 'funcionario', 'idpessoa', $_SESSION['idpessoa'])['idfuncionario'];
+			if($idfuncionario){
+				$_SESSION['idfuncionario'] = $idfuncionario;
+
+				$idmedico = select('idmedico', 'medico', 'idfuncionario', $_SESSION['idfuncionario'])['idmedico'];
+				if($id){
+					$_SESSION['id'] = $id;
+				}
+
+				$idrecepcionista = select('idrecepcionista', 'recepcionista', 'idfuncionario', $_SESSION['idfuncionario'])['idrecepcionista'];
+				if($idrecepcionista){
+					$_SESSION['idrecepcionista'] = $idrecepcionista;
+				}
+
+				$idadministrador = select('idadministrador', 'administrador', 'idfuncionario', $_SESSION['idfuncionario'])['idadministrador'];
+				if($idadministrador){
+					$_SESSION['idadministrador'] = $idadministrador;
+				}
+			}
+
+			var_dump($_SESSION);
 
 			ob_clean();
 			header('LOCATION: /'.BASE);
