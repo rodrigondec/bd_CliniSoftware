@@ -1,5 +1,4 @@
 <?php
-
     // função que executa SQL para insert
     // INSERT INTO $tabela ($chaves,...) VALUES ($valores)
     function insert($dados, $tabela) {
@@ -17,15 +16,15 @@
         // var_dump($sql);
 
         try {
-        	if(!mysql_query($sql, LINK)){
-        		throw new Exception(mysql_error(LINK));
-        	}
-        	return true;
+            if(!mysql_query($sql, LINK)){
+                throw new Exception(mysql_error(LINK));
+            }
+            return true;
         } catch (Exception $e){
-			$titulo = 'Erro no banco de dados!';
-    		$mensagem = str_replace('\'', '´', $e->getMessage());
-	    	swal($titulo, $mensagem, 'error', '', 'btn-danger');
-	    	return false;
+            $titulo = 'Erro no banco de dados!';
+            $mensagem = str_replace('\'', '´', $e->getMessage());
+            swal($titulo, $mensagem, 'error', '', 'btn-danger');
+            return false;
         }
     }
 
@@ -36,15 +35,15 @@
         // var_dump($sql);
 
         try {
-        	if(!mysql_query($sql, LINK)){
-        		throw new Exception(mysql_error(LINK));
-        	}
-        	return true;
+            if(!mysql_query($sql, LINK)){
+                throw new Exception(mysql_error(LINK));
+            }
+            return true;
         } catch (Exception $e) {
-			$titulo = 'Erro no banco de dados!';
-    		$mensagem = str_replace('\'', '´', $e->getMessage());
-	    	swal($titulo, $mensagem, 'error', '', 'btn-danger');
-	    	return false;
+            $titulo = 'Erro no banco de dados!';
+            $mensagem = str_replace('\'', '´', $e->getMessage());
+            swal($titulo, $mensagem, 'error', '', 'btn-danger');
+            return false;
         }
     }
 
@@ -69,17 +68,17 @@
         // var_dump($sql);
 
         try {
-        	if(!mysql_query($sql, LINK)){
-        		throw new Exception(mysql_error(LINK));
-        	}
-        	return true;
+            if(!mysql_query($sql, LINK)){
+                throw new Exception(mysql_error(LINK));
+            }
+            return true;
         } catch (Exception $e) {
-			$titulo = 'Erro no banco de dados!';
-    		$mensagem = str_replace('\'', '´', $e->getMessage());
-    		$mensagem = str_replace('Duplicate entry', 'Dado duplicado', $mensagem);
-    		$mensagem = str_replace('for key', 'para campo', $mensagem);
-	    	swal($titulo, $mensagem, 'error', '', 'btn-danger');
-	    	return false;
+            $titulo = 'Erro no banco de dados!';
+            $mensagem = str_replace('\'', '´', $e->getMessage());
+            $mensagem = str_replace('Duplicate entry', 'Dado duplicado', $mensagem);
+            $mensagem = str_replace('for key', 'para campo', $mensagem);
+            swal($titulo, $mensagem, 'error', '', 'btn-danger');
+            return false;
         }
     }
 
@@ -100,15 +99,15 @@
         // var_dump($sql);echo "<br />";
         $resultado = mysql_query($sql, LINK);
         try {
-        	if(!$resultado){
-        		throw new Exception(mysql_error(LINK));
-        	}
-        	return mysql_fetch_assoc($resultado);
+            if(!$resultado){
+                throw new Exception(mysql_error(LINK));
+            }
+            return mysql_fetch_assoc($resultado);
         } catch (Exception $e) {
-        	$titulo = 'Erro no banco de dados!';
-    		$mensagem = str_replace('\'', '´', $e->getMessage());
-	    	swal($titulo, $mensagem, 'error', '', 'btn-danger');
-	    	return false;
+            $titulo = 'Erro no banco de dados!';
+            $mensagem = str_replace('\'', '´', $e->getMessage());
+            swal($titulo, $mensagem, 'error', '', 'btn-danger');
+            return false;
         }
     }
 
@@ -129,19 +128,19 @@
         // var_dump($sql);echo "<br />";
         $resultado = mysql_query($sql, LINK);
         try {
-        	if(!$resultado){
-        		throw new Exception(mysql_error(LINK));
-        	}
-        	$objetos = array();
-	        while($row = mysql_fetch_assoc($resultado)){
-	            $objetos[] = $row;
-	        }
-	        return $objetos;
+            if(!$resultado){
+                throw new Exception(mysql_error(LINK));
+            }
+            $objetos = array();
+            while($row = mysql_fetch_assoc($resultado)){
+                $objetos[] = $row;
+            }
+            return $objetos;
         } catch (Exception $e) {
-        	$titulo = 'Erro no banco de dados!';
-    		$mensagem = str_replace('\'', '´', $e->getMessage());
-	    	swal($titulo, $mensagem, 'error', '', 'btn-danger');
-	    	return array();
+            $titulo = 'Erro no banco de dados!';
+            $mensagem = str_replace('\'', '´', $e->getMessage());
+            swal($titulo, $mensagem, 'error', '', 'btn-danger');
+            return array();
         }
         
     }
