@@ -24,8 +24,8 @@
 				$_SESSION['idfuncionario'] = $idfuncionario;
 
 				$idmedico = select('idmedico', 'medico', 'idfuncionario', $_SESSION['idfuncionario'])['idmedico'];
-				if($id){
-					$_SESSION['id'] = $id;
+				if($idmedico){
+					$_SESSION['idmedico'] = $idmedico;
 				}
 
 				$idrecepcionista = select('idrecepcionista', 'recepcionista', 'idfuncionario', $_SESSION['idfuncionario'])['idrecepcionista'];
