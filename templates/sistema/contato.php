@@ -7,7 +7,7 @@
 	<form method='post'>
 		<div class='form-group'>
 		    <label for='nome'>input 1</label>
-		    <input type='nome' name='nome' class='form-control' placeholder='Nome'  required />
+		    <input type='text' name='nome' class='form-control' placeholder='Nome'  required />
 		</div>
 		<div class='text-center'>
 			<button class='btn btn-danger' type='reset'>Apagar</button>
