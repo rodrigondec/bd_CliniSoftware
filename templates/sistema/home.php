@@ -34,7 +34,7 @@
                     
                 </label>
                 <div style="text-align: center;"> <br>
-                <a href="#" class="pull-center need-help">Não possui conta? Cadastra-se aqui. </a><span ></span>
+                <a href="<?php echo SISTEMA; ?>cadastro">Não possui conta? Cadastra-se aqui. </a>
                 <div>
                
             </form>
