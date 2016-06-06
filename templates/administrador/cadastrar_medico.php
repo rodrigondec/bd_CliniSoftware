@@ -29,8 +29,8 @@
 		    <input type='text' name='' class='form-control' placeholder=''  required />
 		</div>
 		<div class='text-center'>
-			<button class='btn btn-danger' type='reset'>Cadastrar</button>
-            <button class='btn btn-primary' type='submit'>Enviar</button>
+			<button class='btn btn-danger' type='reset'>Apagar</button>
+            <button class='btn btn-primary' type='submit'>Cadastrar</button>
 		</div>
 	</form>
 </div>
