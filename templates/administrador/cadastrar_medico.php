@@ -24,11 +24,11 @@
 		    <label for=''>Preço Padrão</label>
 		    <input type='text' name='' class='form-control' placeholder=''  required />
 		</div>
-		<div class='form-group col-lg-6'>
+		<div class='form-group col-lg-7'>
 		    <label for=''>Email</label>
 		    <input type='text' name='' class='form-control' placeholder=''  required />
 		</div>
-		<div class='form-group  col-lg-6'>
+		<div class='form-group  col-lg-5'>
 		    <label for=''>Telefone</label>
 		    <input type='text' name='' class='form-control' placeholder=''  required />
 		</div>
