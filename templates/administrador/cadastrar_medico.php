@@ -1,3 +1,7 @@
+<div class='text-center'>
+	<h2>Cadastrar Médico</h2>
+	<hr />
+</div>
 <div class='container col-lg-5 center'>
 	<form method='post'>
 		<div class='form-group col-lg-12'>
