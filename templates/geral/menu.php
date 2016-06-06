@@ -1,6 +1,6 @@
-<nav class="navbar navbar-default navbar-static-top">
+<!-- <nav class="navbar navbar-default navbar-static-top">
     <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
+    
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                 <span class="sr-only">Toggle navigation</span>
@@ -11,7 +11,7 @@
             <a class="navbar-brand" href="/<?php echo BASE; ?>">Página inicial</a>
         </div>
         
-        <!-- Collect the nav links, forms, and other content for toggling -->
+        
         <div id='navbar' class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 <li><a href="<?php echo SISTEMA; ?>contato">Contato</a></li>
@@ -23,8 +23,43 @@
                     </a>
                 </li>
             </ul>
-        </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
+        </div>
+    </div>
+</nav> -->
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#page-top"></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="hidden">
+                    <a href="#page-top"></a>
+                </li>
+                <li class="page-scroll">
+                    <a href="#portfolio">Entrar</a>
+                </li>
+                <li class="page-scroll">
+                    <a href="#about">Sobre</a>
+                </li>
+                <li class="page-scroll">
+                    <a href="#contact">Contato</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
 </nav>
 <!-- Modal -->
 <div id="myModal" class="modal fade" role="dialog">
