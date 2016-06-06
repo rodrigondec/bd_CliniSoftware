@@ -8,9 +8,7 @@ create table pessoa(
     cpf varchar(14),
     data_nascimento date not null,
     email varchar(45),
-    pnome varchar(45) not null,
-	mnome varchar(45),
-	unome varchar(45) not null,
+    nome varchar(60) not null,
     
     primary key(idpessoa),
     unique(cpf),
