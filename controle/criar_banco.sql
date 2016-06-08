@@ -226,12 +226,12 @@ create table agenda(
 	foreign key(idconsulta) references consulta(idconsulta)
 );
 
-insert into pessoa (telefone, cpf, data_nascimento, email, pnome, mnome, unome) values 
-	('(84) 99818-4097', '016.887.454-75', '1994-12-27', 'rodrigondec@gmail.com', 'Rodrigo', 'Nunes', 'de Castro'),
-	('(84) 99166-5652', null, '1994-12-26', 'fernandachaconfontoura@gmail.com', 'Fernanda', 'Chacon', 'Fountoura'),
-	('(84) 11111-1111', null, '1994-12-25', 'major@gmail.com', 'Major', 'Fulano', 'de Testes'),
-	('(84) 22222-2222', null, '1994-12-24', 'marcel@gmail.com', 'Marcel', 'Professor', 'Soberano'),
-	('(84) 333333-3333', null, '1994-12-23', 'francisco@gmail.com', 'francisco', 'Monitor', 'de Tal');
+insert into pessoa (telefone, cpf, data_nascimento, email, nome) values 
+	('(84) 99818-4097', '016.887.454-75', '1994-12-27', 'rodrigondec@gmail.com', 'Rodrigo Nunes de Castro'),
+	('(84) 99166-5652', null, '1994-12-26', 'fernandachaconfontoura@gmail.com', 'Fernanda Chacon Fountoura'),
+	('(84) 11111-1111', null, '1994-12-25', 'major@gmail.com', 'Major Fulano de Testes'),
+	('(84) 22222-2222', null, '1994-12-24', 'marcel@gmail.com', 'Marcel Professor Soberano'),
+	('(84) 333333-3333', null, '1994-12-23', 'francisco@gmail.com', 'francisco Monitor de Tal');
 
 insert into usuario (senha, idpessoa) values 
 	('rodrigo', 1),
