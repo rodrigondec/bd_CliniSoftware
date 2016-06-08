@@ -234,11 +234,11 @@ insert into pessoa (telefone, cpf, data_nascimento, email, nome) values
 	('(84) 333333-3333', null, '1994-12-23', 'francisco@gmail.com', 'francisco Monitor de Tal');
 
 insert into usuario (senha, idpessoa) values 
-	('rodrigo', 1),
-	('fernanda', 2),
-	('major', 3),
-	('marcel', 4),
-	('francisco', 5);
+	(md5('rodrigo'), 1),
+	(md5('fernanda'), 2),
+	(md5('major'), 3),
+	(md5('marcel'), 4),
+	(md5('francisco'), 5);
 
 insert into funcionario (idpessoa, salario, data_pagamento) values
 	(1, 800.00, '05'),
