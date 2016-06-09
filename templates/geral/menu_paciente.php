@@ -14,21 +14,15 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div id='navbar' class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
+                <li><a href="<?php echo PACIENTE; ?>/visualizar_agenda">Minha Agenda</a></li>
                 <li class='dropdown'>
-                    <a href="#" class='dropdown-toggle' data-toggle='dropdown'>Menu Paciente<span class="caret"></span></a>
+                    <a href="#" class='dropdown-toggle' data-toggle='dropdown'>Consultas<span class="caret"></span></a>
                     <ul class='dropdown-menu'>
-                        <li><a href="<?php echo ADMIN; ?>listar_hospitais">Item 1</a></li>
-                        <li><a href="<?php echo ADMIN; ?>cadastrar_hospital">Item 2</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li class="dropdown-submenu">
-                            <a tabindex="-1" href="#">Submenu<div class='inline'><i class="fa fa-caret-right" style=''></i></div></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Subitem 1</a></li>
-                                <li><a href="#">Subitem 2</a></li>
-                            </ul>
-                        </li>
+                        <li><a href="<?php echo PACIENTE; ?>/marcar_consulta">Marcar</a></li>
+                        <li><a href="<?php echo PACIENTE; ?>/desmarcar_consulta">Desmarcar</a></li>
                     </ul> 
                 </li>
+                <li><a href="<?php echo PACIENTE; ?>/visualizar_historico">Meu Histórico</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">                
                 <li class='dropdown'>
