@@ -5,7 +5,11 @@
 	
 	define('LOGIN', ARQUIVOS.'/'.BASE.'login.php');
 
-	define('SISTEMA', '/'.BASE.'index.php/sistema/');
+	define('SISTEMA', '/'.BASE.'index.php/sistema');
+	define('PACIENTE', '/'.BASE.'index.php/paciente');
+	define('ADMINISTRADOR', '/'.BASE.'index.php/administrador');
+	define('MEDICO', '/'.BASE.'index.php/medico');
+	define('RECEPCIONISTA', '/'.BASE.'index.php/recepcionista');
 
 	define('DB_NAME', 'CliniSoftware'); //Mudar para o nome do banco
 	define('DB_USER', 'root');
