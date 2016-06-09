@@ -18,7 +18,7 @@ create table pessoa(
 
 create table usuario(
 	idusuario int not null auto_increment,
-	senha varchar(15) not null,
+	senha varchar(50) not null,
 	idpessoa int not null,
 	
 	primary key (idusuario),
@@ -227,8 +227,8 @@ create table agenda(
 );
 
 insert into pessoa (telefone, cpf, data_nascimento, email, nome) values 
-	('(84) 99818-4097', '016.887.454-75', '1994-12-27', 'rodrigondec@gmail.com', 'Rodrigo Nunes de Castro'),
-	('(84) 99166-5652', null, '1994-12-26', 'fernandachaconfontoura@gmail.com', 'Fernanda Chacon Fountoura'),
+	('(84) 99818-4097', '016.887.454-75', '1994-12-27', 'rodrigo@gmail.com', 'Rodrigo Nunes de Castro'),
+	('(84) 99166-5652', null, '1994-12-26', 'fernanda@gmail.com', 'Fernanda Chacon Fountoura'),
 	('(84) 11111-1111', null, '1994-12-25', 'major@gmail.com', 'Major Fulano de Testes'),
 	('(84) 22222-2222', null, '1994-12-24', 'marcel@gmail.com', 'Marcel Professor Soberano'),
 	('(84) 333333-3333', null, '1994-12-23', 'francisco@gmail.com', 'francisco Monitor de Tal');
