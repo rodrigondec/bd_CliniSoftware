@@ -18,10 +18,10 @@
                 <li class='dropdown'>
                     <a href="#" class='dropdown-toggle' data-toggle='dropdown'>Médicos<span class="caret"></span></a>
                     <ul class='dropdown-menu'>
-                        <li><a href="/<?php echo BASE; ?>index.php/administrador/cadastrar_medico">Cadastrar</a></li>
-                        <li><a href="/<?php echo BASE; ?>index.php/administrador/listar_medicos">Listar</a></li>
-                        <li><a href="/<?php echo BASE; ?>index.php/administrador/validar_medico">Validar</a></li>
-                        <li><a href="/<?php echo BASE; ?>index.php/administrador/invalidar_medico">Invalidar</a></li>
+                        <li><a href="<?php echo ADMINISTRADOR; ?>/cadastrar_medico">Cadastrar</a></li>
+                        <li><a href="<?php echo ADMINISTRADOR; ?>/listar_medicos">Listar</a></li>
+                        <li><a href="<?php echo ADMINISTRADOR; ?>/validar_medico">Validar</a></li>
+                        <li><a href="<?php echo ADMINISTRADOR; ?>/invalidar_medico">Invalidar</a></li>
                     </ul> 
                 </li>
             </ul>
@@ -32,7 +32,10 @@
                         <li><a href="<?php echo ADMIN; ?>meus_dados">Meus dados</a></li>
                         <li role="separator" class="divider"></li>
                         <li><a href="#" <?php echo "onclick='log_out(\"".BASE."\")'"; ?>>Sair</a></li>
-                        </li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="<?php echo SISTEMA; ?>/swap?tipo=paciente">Trocar para paciente</a></li>
+                        <li><a href="<?php echo SISTEMA; ?>/swap?tipo=medico">Trocar para medico</a></li>
+                        <li><a href="<?php echo SISTEMA; ?>/swap?tipo=recepcionista">Trocar para recepcionista</a></li>
                     </ul>
                 </li>
             </ul>
