@@ -4,8 +4,7 @@
 		$idpessoa = select('idpessoa', 'pessoa', 'email', $_POST['email'])['idpessoa'];
 		$senha = select('senha', 'usuario', 'idpessoa', $idpessoa)['senha'];
 
-		// if($usuario && $usuario['senha'] == md5($_POST['senha'])){
-		if($senha && $senha == $_POST['senha']){
+		if($senha && $senha == md5($_POST['senha'])){
 			session_destroy();
 			session_start();
 			$_SESSION['idpessoa'] = $idpessoa;
