@@ -44,8 +44,28 @@
             // END VERIFICAÇÃO
         } 
         else{
-            $pasta = 'sistema';    
-            $arquivo = 'home';          
+            if(!isset($_SESSION['idpessoa'])){
+                $pasta = 'sistema';    
+                $arquivo = 'home';
+            }
+            else if(isset($_SESSION['idpessoa'])){
+                if(isset($_SESSION['idpaciente'])){
+                    $pasta = 'paciente';    
+                    $arquivo = 'home';
+                }
+                if(isset($_SESSION['idmedico'])){
+                    $pasta = 'medico';    
+                    $arquivo = 'home';
+                }
+                if(isset($_SESSION['idrecepcionista'])){
+                    $pasta = 'recepcionista';    
+                    $arquivo = 'home';
+                }
+                if(isset($_SESSION['idadministrador'])){
+                    $pasta = 'administrador';    
+                    $arquivo = 'home';
+                }
+            }
         }
         $caminho = montar_include($pasta, $arquivo);
         if($include){
