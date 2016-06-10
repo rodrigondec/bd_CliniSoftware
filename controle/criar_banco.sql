@@ -9,21 +9,17 @@ create table pessoa(
     data_nascimento date not null,
     email varchar(45),
     nome varchar(60) not null,
-    
     primary key(idpessoa),
     unique(cpf),
     unique(email)
-
 );
 
 create table usuario(
 	idusuario int not null auto_increment,
 	senha varchar(50) not null,
 	idpessoa int not null,
-	
 	primary key (idusuario),
 	foreign key (idpessoa) references pessoa(idpessoa) 
-	
 );
 
 create table funcionario(
@@ -31,10 +27,8 @@ create table funcionario(
     idpessoa int not null,
     salario float not null,
     data_pagamento date not null,
-    
     primary key(idfuncionario),
     foreign key(idpessoa) references pessoa(idpessoa)
-
 );
 
 create table expediente(
@@ -44,38 +38,30 @@ create table expediente(
 	hora_inicial_intervalo varchar(5) not null,
 	hora_final_intervalo varchar(5) not null,
     dia_semana varchar(13) not null,
-    
     primary key (idexpediente)
-    
 );
 
 create table trabalha(
 	idtrabalha int not null auto_increment,
     idexpediente int not null,
     idfuncionario int not null,
-    
     primary key (idtrabalha),
     foreign key (idexpediente) references expediente(idexpediente),
     foreign key (idfuncionario) references funcionario(idfuncionario)
-
 );
 
 create table administrador(
 	idadministrador int not null auto_increment,
     idfuncionario int not null,
-    
     primary key(idadministrador),
     foreign key(idfuncionario) references funcionario(idfuncionario)
-
 );
 
 create table recepcionista(
 	idrecepcionista int not null auto_increment,
 	idfuncionario int not null,
-     
     primary key(idrecepcionista),
     foreign key(idfuncionario) references funcionario(idfuncionario)
- 
 );
 
 create table medico(
@@ -83,36 +69,29 @@ create table medico(
     idfuncionario int not null,
     preco_padrao float,
     cadastro_unico int not null,
-    
     primary key(idmedico),
     foreign key(idfuncionario) references funcionario(idfuncionario)
-
 );
 
 create table paciente(
 	idpaciente int not null auto_increment,
     idpessoa int not null,
-    
     primary key(idpaciente),
     foreign key(idpessoa) references pessoa(idpessoa)
-
 );
 
 create table gerencia(
 	idgerencia int not null auto_increment,
     idrecepcionista int not null,
     idmedico int not null,
-    
     primary key(idgerencia),
     foreign key(idrecepcionista) references recepcionista(idrecepcionista),
     foreign key(idmedico) references medico(idmedico)
-
 );
 
 create table especialiadade(
 	idespecialidade int not null auto_increment,
     nome varchar(45) not null,
-
 	primary key(idespecialidade)
 );
 
@@ -120,19 +99,15 @@ create table especializado(
 	idespecializado int not null auto_increment,
     idmedico int not null,
     idespecialidade int not null,
-    
 	primary key(idespecializado),
     foreign key(idmedico) references medico(idmedico),
     foreign key(idespecialidade) references especialiadade(idespecialidade)
 );
 
-
 create table mercancia(
 	idmercancia int not null auto_increment,
-
 	primary key(idmercancia)
 );
-
 
 create table consulta(
 	idconsulta int not null auto_increment,
@@ -140,8 +115,6 @@ create table consulta(
     hora varchar(5) not null,
     data date not null,
     preco float not null,
-    
-
 	primary key(idconsulta),
     foreign key(idmercancia) references mercancia(idmercancia)
 );
@@ -150,7 +123,6 @@ create table ocorrencia_medica(
 	idocorrencia_medica int not null auto_increment,
     data date not null,
     diagnostico varchar(45) not null,
-
 	primary key(idocorrencia_medica)
 );
 
@@ -158,7 +130,6 @@ create table tem(
 	idtem int not null auto_increment,
     idocorrencia_medica int not null,
     idpaciente int not null,
-
 	primary key(idtem),
     foreign key(idocorrencia_medica) references ocorrencia_medica(idocorrencia_medica),
     foreign key(idpaciente) references paciente(idpaciente)
@@ -168,7 +139,6 @@ create table conta(
 	idconta int not null auto_increment,
 	idpaciente int not null,
 	pago boolean not null,
-
 	primary key(idconta),
 	foreign key(idpaciente) references paciente(idpaciente)
 );
@@ -178,7 +148,6 @@ create table cobranca(
 	idcobranca int not null auto_increment,
 	idconta int not null,
 	idmercancia int not null,
-
 	primary key(idcobranca),
 	foreign key(idconta) references conta(idconta),
 	foreign key(idmercancia) references mercancia(idmercancia)
@@ -189,7 +158,6 @@ create table procedimento(
 	idmercancia int not null,
 	nome varchar(45) not null,
 	preco float not null,
-	
 	primary key(idprocedimento),
 	foreign key(idmercancia) references mercancia(idmercancia)
 );
@@ -199,7 +167,6 @@ create table produto(
 	idmercancia int not null,
 	nome varchar(45) not null,
 	preco float not null,
-
 	primary key(idproduto),
 	foreign key(idmercancia) references mercancia(idmercancia)
 );
@@ -208,7 +175,6 @@ create table inclui(
 	idinclui int not null auto_increment,
 	idproduto int not null,
 	idprocedimento int not null,
-
 	primary key(idinclui),
 	foreign key(idproduto) references produto(idproduto),
 	foreign key(idprocedimento) references procedimento(idprocedimento)
@@ -219,7 +185,6 @@ create table agenda(
 	idpaciente int not null,
 	idmedico int not null,
 	idconsulta int not null,
-
 	primary key(idagenda),
 	foreign key(idpaciente) references paciente(idpaciente),
 	foreign key(idmedico) references medico(idmedico),
