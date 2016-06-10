@@ -26,7 +26,7 @@ create table funcionario(
 	idfuncionario int not null auto_increment,
     idpessoa int not null,
     salario float not null,
-    data_pagamento date not null,
+    data_pagamento varchar(2) not null,
     primary key(idfuncionario),
     foreign key(idpessoa) references pessoa(idpessoa)
 );
@@ -68,7 +68,7 @@ create table medico(
 	idmedico int not null auto_increment,
     idfuncionario int not null,
     preco_padrao float,
-    cadastro_unico int not null,
+    cadastro_unico int not null default 1,
     primary key(idmedico),
     foreign key(idfuncionario) references funcionario(idfuncionario)
 );
@@ -196,7 +196,7 @@ insert into pessoa (telefone, cpf, data_nascimento, email, nome) values
 	('(84) 99166-5652', null, '1994-12-26', 'fernanda@gmail.com', 'Fernanda Chacon Fountoura'),
 	('(84) 11111-1111', null, '1994-12-25', 'major@gmail.com', 'Major Fulano de Testes'),
 	('(84) 22222-2222', null, '1994-12-24', 'marcel@gmail.com', 'Marcel Professor Soberano'),
-	('(84) 333333-3333', null, '1994-12-23', 'francisco@gmail.com', 'francisco Monitor de Tal');
+	('(84) 33333-3333', null, '1994-12-23', 'francisco@gmail.com', 'francisco Monitor de Tal');
 
 insert into usuario (senha, idpessoa) values 
 	(md5('rodrigo'), 1),
