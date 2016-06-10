@@ -8,6 +8,7 @@ jQuery(function($){
 	$("#data").mask("99/99/9999");
 	$("#telefone").mask("(84) 99999-9999");
 	$("#cpf").mask("999.999.999-99");
+	$('#preco').mask("###0.00", {reverse: true});
 	
 });
 </script>
@@ -36,7 +37,7 @@ jQuery(function($){
 		</div>
 		<div class='form-group col-lg-7'>
 		    <label for=''>Email</label>
-		    <input type='text' name='email' class='form-control' placeholder='Digite aqui o email'  required />
+		    <input type='email' name='email' class='form-control' placeholder='Digite aqui o email'  required />
 		</div>
 		<div class='form-group  col-lg-5'>
 		    <label for=''>Telefone</label>
