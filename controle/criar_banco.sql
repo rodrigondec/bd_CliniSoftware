@@ -68,7 +68,7 @@ create table medico(
 	idmedico int not null auto_increment,
     idfuncionario int not null,
     preco_padrao float,
-    cadastro_unico int not null auto_increment,
+    cadastro_unico int not null default 1,
     primary key(idmedico),
     foreign key(idfuncionario) references funcionario(idfuncionario)
 );
