@@ -105,8 +105,8 @@ create table especializado(
     idmedico int not null,
     idespecialidade int not null,
 	primary key(idespecializado),
-    foreign key(idmedico) references medico(idmedico),
-    foreign key(idespecialidade) references especialiadade(idespecialidade)
+    foreign key(idmedico) references medico(idmedico) on delete cascade,
+    foreign key(idespecialidade) references especialiadade(idespecialidade) on delete cascade
 );
 
 create table mercancia(
