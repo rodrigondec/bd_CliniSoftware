@@ -78,8 +78,8 @@
 
     // função que executa SQL para DELETE
     // DELETE FROM $tabela WHERE id=$id
-    function delete($id, $tabela){
-        $sql = 'DELETE FROM '.$tabela.' WHERE id='.$id.';';
+    function delete($restricao, $id, $tabela){
+        $sql = 'DELETE FROM '.$tabela.' WHERE '.$restricao.'='.$id.';';
         // var_dump($sql);
 
         try {
