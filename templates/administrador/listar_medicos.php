@@ -6,7 +6,7 @@
     $medicos = run_select_many('select idmedico, nome, email, cpf, cadastro_unico, ativo from pessoa natural join funcionario natural join medico;');
     // var_dump($medicos);
 ?>
-<div class="table-responsive container">
+<div class="table-responsive container col-lg-9 center">
     <table class="table table-striped table-hover table-condensed">
         <thead> 
             <tr>
