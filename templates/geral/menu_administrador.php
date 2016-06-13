@@ -29,18 +29,6 @@
                         <li><a href="<?php echo ADMINISTRADOR; ?>/listar_especialidades">Listar</a></li>
                     </ul> 
                 </li>
-                <li class='dropdown'>
-                    <a href="#" class='dropdown-toggle' data-toggle='dropdown'>Interrupções<span class="caret"></span></a>
-                    <ul class='dropdown-menu'>
-                        <li><a href="<?php echo ADMINISTRADOR; ?>/cadastrar_interrupcao">Cadastrar</a></li>
-                    </ul> 
-                </li>
-                <li class='dropdown'>
-                    <a href="#" class='dropdown-toggle' data-toggle='dropdown'>Planos de Saúde<span class="caret"></span></a>
-                    <ul class='dropdown-menu'>
-                        <li><a href="<?php echo ADMINISTRADOR; ?>/cadastrar_plano">Cadastrar</a></li>
-                    </ul> 
-                </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">                
                 <li class='dropdown'>
