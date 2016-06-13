@@ -4,7 +4,7 @@
 </div>
 <?php  
     $medicos = run_select_many('select idmedico, nome, email, cpf, cadastro_unico from pessoa natural join funcionario natural join medico;');
-    var_dump($medicos);
+    // var_dump($medicos);
 ?>
 <div class="table-responsive container">
     <table class="table table-striped table-hover table-condensed">
@@ -68,3 +68,23 @@
         </tbody>
     </table>
 </div>
+<?php 
+    if(count($_POST) > 0){
+
+        $idmedico = $_POST['idmedico'];
+        $idpessoa = run_select('select idpessoa from pessoa natural join funcionario natural join medico where idmedico='.$idmedico.';')['idpessoa'];
+
+        $pessoa['nome'] = $_POST['nome'];
+        $pessoa['email'] = $_POST['email'];
+        $pessoa['cpf'] = $_POST['cpf'];
+
+        update($pessoa, 'pessoa', 'idpessoa', $idpessoa);
+
+        $dados['cadastro_unico'] = $_POST['cadastro_unico'];
+
+        update($dados, 'medico', 'idmedico', $idmedico);
+
+        ob_clean();
+        header('LOCATION: '.ADMINISTRADOR.'/listar_medicos');
+    }
+?>
