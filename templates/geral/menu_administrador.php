@@ -29,6 +29,23 @@
                         <li><a href="<?php echo ADMINISTRADOR; ?>/listar_especialidades">Listar</a></li>
                     </ul> 
                 </li>
+                <li class='dropdown'>
+                    <a href="#" class='dropdown-toggle' data-toggle='dropdown'>Expediente<span class="caret"></span></a>
+                    <ul class='dropdown-menu'>
+                        <li><a href="<?php echo ADMINISTRADOR; ?>/cadastrar_expediente">Cadastrar</a></li>
+                        <li><a href="<?php echo ADMINISTRADOR; ?>/listar_expedientes">Listar</a></li>
+                    </ul> 
+                </li>
+                <li class='dropdown'>
+                    <a href="#" class='dropdown-toggle' data-toggle='dropdown'>Funcionário<span class="caret"></span></a>
+                    <ul class='dropdown-menu'>
+                        <li><a href="<?php echo ADMINISTRADOR; ?>/listar_funcionarios">Listar</a></li>
+                        <li>
+                            <a href="<?php echo ADMINISTRADOR; ?>/registrar_expediente">Registrar Expediente</a>
+                        </li>
+                        
+                    </ul> 
+                </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">                
                 <li class='dropdown'>
