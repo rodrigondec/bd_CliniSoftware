@@ -74,14 +74,15 @@ create table medico(
     preco_padrao float,
     cadastro_unico int not null default 1,
     primary key(idmedico),
-    foreign key(idfuncionario) references funcionario(idfuncionario)
+    foreign key(idfuncionario) references funcionario(idfuncionario) on delete cascade,
+    unique(idfuncionario)
 );
 
 create table paciente(
 	idpaciente int not null auto_increment,
     idpessoa int not null,
     primary key(idpaciente),
-    foreign key(idpessoa) references pessoa(idpessoa)
+    foreign key(idpessoa) references pessoa(idpessoa) on delete cascade
 );
 
 create table gerencia(
