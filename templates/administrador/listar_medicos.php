@@ -3,7 +3,7 @@
 	<hr />
 </div>
 <?php  
-    $medicos = run_select_many('select idmedico, nome, email, cpf, cadastro_unico from pessoa natural join funcionario natural join medico;');
+    $medicos = run_select_many('select idmedico, nome, email, cpf, cadastro_unico, ativo from pessoa natural join funcionario natural join medico;');
     // var_dump($medicos);
 ?>
 <div class="table-responsive container">
@@ -59,9 +59,9 @@
                     </div>
                 </div>
             <?php if($medico['ativo']): ?>
-                <td><button class='btn btn-warning'>Invalidar</button></td>
+                <td><a href="<?php echo ADMINISTRADOR.'/invalidar_medico?idmedico='.$medico['idmedico']; ?>" class='btn btn-warning'>Invalidar</a></td>
             <?php else: ?>
-                <td><button class='btn btn-success'>Validar</button></td>
+                <td><a href="<?php echo ADMINISTRADOR.'/validar_medico?idmedico='.$medico['idmedico']; ?>" class='btn btn-success'>Validar</a></td>
             <?php endif; ?>
             </tr>
         <?php endforeach; ?>
