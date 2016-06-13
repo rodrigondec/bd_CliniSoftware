@@ -153,10 +153,10 @@ create table conta(
 
 
 create table cobranca(
-	idcobranca int not null auto_increment,
+	-- idcobranca int not null auto_increment,
 	idconta int not null,
 	idmercancia int not null,
-	primary key(idcobranca),
+	-- primary key(idcobranca),
 	foreign key(idconta) references conta(idconta),
 	foreign key(idmercancia) references mercancia(idmercancia)
 );
