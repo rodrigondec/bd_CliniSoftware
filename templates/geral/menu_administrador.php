@@ -26,6 +26,7 @@
                     <a href="#" class='dropdown-toggle' data-toggle='dropdown'>Especialidades<span class="caret"></span></a>
                     <ul class='dropdown-menu'>
                         <li><a href="<?php echo ADMINISTRADOR; ?>/cadastrar_especialidade">Cadastrar</a></li>
+                        <li><a href="<?php echo ADMINISTRADOR; ?>/listar_especialidades">Listar</a></li>
                     </ul> 
                 </li>
                 <li class='dropdown'>
