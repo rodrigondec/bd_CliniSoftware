@@ -19,7 +19,8 @@ create table usuario(
 	senha varchar(50) not null,
 	idpessoa int not null,
 	primary key (idusuario),
-	foreign key (idpessoa) references pessoa(idpessoa) 
+	foreign key (idpessoa) references pessoa(idpessoa),
+	unique(idpessoa)
 );
 
 create table funcionario(
