@@ -41,7 +41,7 @@
                     <ul class='dropdown-menu'>
                         <li><a href="<?php echo ADMINISTRADOR; ?>/listar_funcionarios">Listar</a></li>
                         <li>
-                            <a href="<?php echo ADMINISTRADOR; ?>/registrar_expediente">Registrar Expediente</a>
+                            <a href="<?php echo ADMINISTRADOR; ?>/selecionar_funcionario_expediente">Registrar Expediente</a>
                         </li>
                         
                     </ul> 
