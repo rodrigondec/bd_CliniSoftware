@@ -127,37 +127,35 @@ create table consulta(
 
 create table ocorrencia_medica(
 	idocorrencia_medica int not null auto_increment,
-	idpaciente int not null,
     data date not null,
     diagnostico varchar(45) not null,
-	primary key(idocorrencia_medica),
-	foreign key(idpaciente) references paciente(idpaciente) on delete cascade
+	primary key(idocorrencia_medica)
 );
 
-/*create table tem(
+create table tem(
 	idtem int not null auto_increment,
     idocorrencia_medica int not null,
     idpaciente int not null,
 	primary key(idtem),
     foreign key(idocorrencia_medica) references ocorrencia_medica(idocorrencia_medica),
     foreign key(idpaciente) references paciente(idpaciente)
-);*/
+);
 
 create table conta(
 	idconta int not null auto_increment,
-	idpaciente int,
+	idpaciente int not null,
 	pago boolean not null,
 	primary key(idconta),
-	foreign key(idpaciente) references paciente(idpaciente) on delete set null
+	foreign key(idpaciente) references paciente(idpaciente)
 );
 
 
 create table cobranca(
-	-- idcobranca int not null auto_increment,
+	idcobranca int not null auto_increment,
 	idconta int not null,
 	idmercancia int not null,
-	-- primary key(idcobranca),
-	foreign key(idconta) references conta(idconta) on delete cascade,
+	primary key(idcobranca),
+	foreign key(idconta) references conta(idconta),
 	foreign key(idmercancia) references mercancia(idmercancia)
 );
 
