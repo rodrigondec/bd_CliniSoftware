@@ -20,8 +20,6 @@
                     <ul class='dropdown-menu'>
                         <li><a href="<?php echo ADMINISTRADOR; ?>/cadastrar_medico">Cadastrar</a></li>
                         <li><a href="<?php echo ADMINISTRADOR; ?>/listar_medicos">Listar</a></li>
-                        <li><a href="<?php echo ADMINISTRADOR; ?>/validar_medico">Validar</a></li>
-                        <li><a href="<?php echo ADMINISTRADOR; ?>/invalidar_medico">Invalidar</a></li>
                     </ul> 
                 </li>
                 <li class='dropdown'>
