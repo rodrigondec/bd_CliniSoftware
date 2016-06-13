@@ -1,3 +1,4 @@
+
 <nav class="navbar navbar-default navbar-static-top" role='navigation'>
     <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -18,7 +19,7 @@
                 <li class='dropdown'>
                     <a href="#" class='dropdown-toggle' data-toggle='dropdown'>Consultas<span class="caret"></span></a>
                     <ul class='dropdown-menu'>
-                        <li><a href="<?php echo PACIENTE; ?>/marcar_consulta">Marcar</a></li>
+                        <li><a href="<?php echo PACIENTE; ?>/escolher_especialidade">Marcar</a></li>
                         <li><a href="<?php echo PACIENTE; ?>/desmarcar_consulta">Desmarcar</a></li>
                     </ul> 
                 </li>
