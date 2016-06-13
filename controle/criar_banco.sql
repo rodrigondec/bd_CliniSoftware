@@ -111,6 +111,7 @@ create table especializado(
 
 create table mercancia(
 	idmercancia int not null auto_increment,
+	nome varchar(15) not null,
 	primary key(idmercancia)
 );
 
