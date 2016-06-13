@@ -188,13 +188,13 @@ create table inclui(
 
 create table agenda(
 	idagenda int not null auto_increment,
-	idpaciente int not null,
-	idmedico int not null,
-	idconsulta int not null,
+	idpaciente int,
+	idmedico int,
+	idconsulta int,
 	primary key(idagenda),
-	foreign key(idpaciente) references paciente(idpaciente),
-	foreign key(idmedico) references medico(idmedico),
-	foreign key(idconsulta) references consulta(idconsulta)
+	foreign key(idpaciente) references paciente(idpaciente) on delete set null,
+	foreign key(idmedico) references medico(idmedico) on delete set null,
+	foreign key(idconsulta) references consulta(idconsulta) on delete set null
 );
 
 insert into pessoa (telefone, cpf, data_nascimento, email, nome) values 
