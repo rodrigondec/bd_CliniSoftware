@@ -73,6 +73,7 @@ create table medico(
     idfuncionario int not null,
     preco_padrao float,
     cadastro_unico int not null default 1,
+    ativo boolean not null default 1,
     primary key(idmedico),
     foreign key(idfuncionario) references funcionario(idfuncionario) on delete cascade,
     unique(idfuncionario)
@@ -137,7 +138,7 @@ create table ocorrencia_medica(
 create table conta(
 	idconta int not null auto_increment,
 	idpaciente int,
-	pago boolean not null,
+	pago boolean not null default 0,
 	primary key(idconta),
 	foreign key(idpaciente) references paciente(idpaciente) on delete set null
 );
@@ -169,20 +170,16 @@ create table produto(
 );
 
 create table inclui(
-	idinclui int not null auto_increment,
 	idproduto int not null,
 	idprocedimento int not null,
-	primary key(idinclui),
 	foreign key(idproduto) references produto(idproduto),
 	foreign key(idprocedimento) references procedimento(idprocedimento)
 );
 
 create table agenda(
-	idagenda int not null auto_increment,
 	idpaciente int,
 	idmedico int,
 	idconsulta int,
-	primary key(idagenda),
 	foreign key(idpaciente) references paciente(idpaciente) on delete set null,
 	foreign key(idmedico) references medico(idmedico) on delete set null,
 	foreign key(idconsulta) references consulta(idconsulta) on delete set null
