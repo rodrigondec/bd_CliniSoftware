@@ -134,14 +134,14 @@ create table ocorrencia_medica(
 	foreign key(idpaciente) references paciente(idpaciente) on delete cascade
 );
 
-create table tem(
+/*create table tem(
 	idtem int not null auto_increment,
     idocorrencia_medica int not null,
     idpaciente int not null,
 	primary key(idtem),
     foreign key(idocorrencia_medica) references ocorrencia_medica(idocorrencia_medica),
     foreign key(idpaciente) references paciente(idpaciente)
-);
+);*/
 
 create table conta(
 	idconta int not null auto_increment,
