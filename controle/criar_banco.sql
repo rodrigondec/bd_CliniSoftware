@@ -127,9 +127,11 @@ create table consulta(
 
 create table ocorrencia_medica(
 	idocorrencia_medica int not null auto_increment,
+	idpaciente int not null,
     data date not null,
     diagnostico varchar(45) not null,
-	primary key(idocorrencia_medica)
+	primary key(idocorrencia_medica),
+	foreign key(idpaciente) references paciente(idpaciente) on delete cascade
 );
 
 create table tem(
