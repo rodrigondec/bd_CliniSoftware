@@ -50,7 +50,17 @@ jQuery(function($){
 	</form>
 </div>
 <?php  
-	
+	if(count($_POST) > 0){
+		/* CADASTRO DE PESSOA OU VERIFICAÇÃO */
+		$pessoa = select('*', 'pessoa', 'email', $_POST['email']);
+		var_dump($pessoa);
 
+		if($pessoa){ /* PESSOA EXISTE */
 
+		}
+		else{
+			$pessoa = array();
+			$pessoa['nome'] = $_POST['nome']
+		}
+	}
 ?>
