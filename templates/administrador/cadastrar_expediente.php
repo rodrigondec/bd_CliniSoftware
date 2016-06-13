@@ -13,7 +13,7 @@
 <div class='container col-lg-5 center'>
 	<form method='post'>
 		<div class='form-group col-lg-12'>
-		    <label for='hora_inicial_expediente'>Dia da Semana</label>
+		    <label for='dia_semana'>Dia da Semana</label>
 		    <select class="form-control" name="dia_semana" required>
 		    	<option value="" selected disabled>Selecione um dia</option>
 		    	<option value="Segunda-Feira">
