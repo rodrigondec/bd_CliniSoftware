@@ -8,7 +8,7 @@
 		$("#cpf").mask("000.000.000-00");
 		$('#preco').mask("###0.00", {reverse: true});
 		$('#salario').mask("###0.00", {reverse: true});
-		$("#data").mask("99");
+		$("#data").mask("00");
 	});
 </script>
 <div class='container col-lg-5 center'>
@@ -43,7 +43,7 @@
 		</div>
 		<div class='form-group col-lg-7'>
 		    <label for='salario'>Salário</label>
-		    <input id='salario' type='text' name='salario' class='form-control' placeholder='Digite aqui o salário'   />
+		    <input id='salario' type='number' name='salario' class='form-control' placeholder='Digite aqui o salário' min='500'  />
 		</div>
 		<div class='form-group col-lg-5'>
 		    <label for='data_pagamento'>Data de Pagamento</label>
