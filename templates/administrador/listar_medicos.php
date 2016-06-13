@@ -3,8 +3,8 @@
 	<hr />
 </div>
 <?php  
-    $medicos = run_select_many('select nome, email, cpf, cadastro_unico from pessoa natural join funcionario natural join medico;');
-    // var_dump($medicos);
+    $medicos = run_select_many('select idmedico, nome, email, cpf, cadastro_unico from pessoa natural join funcionario natural join medico;');
+    var_dump($medicos);
 ?>
 <div class="table-responsive container">
     <table class="table table-striped table-hover table-condensed">
@@ -14,6 +14,8 @@
                 <th>Email</th>
                 <th>CPF</th>
                 <th>Cadastro Único</th>
+                <th class='col-lg-1'></th>
+                <th class='col-lg-1'</th>
             </tr>
         </thead>
         <tbody>
