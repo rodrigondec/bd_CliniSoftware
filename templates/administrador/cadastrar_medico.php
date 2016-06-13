@@ -85,7 +85,7 @@
 				insert($medico, 'medico');
 
 				ob_clean();
-				header('LOCATION: /'.BASE);
+				header('LOCATION: '.ADMINISTRADOR.'/listar_medicos');
 			}
 			else{
 				swal('Erro!', 'Essa pessoa já está cadastrada como um médico.', 'error', ADMINISTRADOR.'/cadastrar_medico', 'btn-danger');
@@ -119,7 +119,7 @@
 			insert($medico, 'medico');
 
 			ob_clean();
-			header('LOCATION: /'.BASE);
+			header('LOCATION: '.ADMINISTRADOR.'/listar_medicos');
 		}
 	}
 ?>
