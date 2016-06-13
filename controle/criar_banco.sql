@@ -48,22 +48,24 @@ create table trabalha(
     idexpediente int not null,
     idfuncionario int not null,
     primary key (idtrabalha),
-    foreign key (idexpediente) references expediente(idexpediente),
-    foreign key (idfuncionario) references funcionario(idfuncionario)
+    foreign key (idexpediente) references expediente(idexpediente) on delete cascade,
+    foreign key (idfuncionario) references funcionario(idfuncionario) on delete cascade
 );
 
 create table administrador(
 	idadministrador int not null auto_increment,
     idfuncionario int not null,
     primary key(idadministrador),
-    foreign key(idfuncionario) references funcionario(idfuncionario)
+    foreign key(idfuncionario) references funcionario(idfuncionario) on delete cascade,
+    unique(idfuncionario)
 );
 
 create table recepcionista(
 	idrecepcionista int not null auto_increment,
 	idfuncionario int not null,
     primary key(idrecepcionista),
-    foreign key(idfuncionario) references funcionario(idfuncionario)
+    foreign key(idfuncionario) references funcionario(idfuncionario) on delete cascade,
+    unique(idfuncionario)
 );
 
 create table medico(
