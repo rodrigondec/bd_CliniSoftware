@@ -44,10 +44,8 @@ create table expediente(
 );
 
 create table trabalha(
-	idtrabalha int not null auto_increment,
     idexpediente int not null,
     idfuncionario int not null,
-    primary key (idtrabalha),
     foreign key (idexpediente) references expediente(idexpediente) on delete cascade,
     foreign key (idfuncionario) references funcionario(idfuncionario) on delete cascade
 );
