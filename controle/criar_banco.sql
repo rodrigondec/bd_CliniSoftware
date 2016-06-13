@@ -93,7 +93,7 @@ create table gerencia(
     foreign key(idmedico) references medico(idmedico) on delete cascade
 );
 
-create table especialiadade(
+create table especialidade(
 	idespecialidade int not null auto_increment,
     nome varchar(45) not null,
 	primary key(idespecialidade)
@@ -105,7 +105,7 @@ create table especializado(
     idespecialidade int not null,
 	primary key(idespecializado),
     foreign key(idmedico) references medico(idmedico) on delete cascade,
-    foreign key(idespecialidade) references especialiadade(idespecialidade) on delete cascade
+    foreign key(idespecialidade) references especialidade(idespecialidade) on delete cascade
 );
 
 create table mercancia(
