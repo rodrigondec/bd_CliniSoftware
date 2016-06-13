@@ -90,8 +90,8 @@ create table gerencia(
     idrecepcionista int not null,
     idmedico int not null,
     primary key(idgerencia),
-    foreign key(idrecepcionista) references recepcionista(idrecepcionista),
-    foreign key(idmedico) references medico(idmedico)
+    foreign key(idrecepcionista) references recepcionista(idrecepcionista) on delete cascade,
+    foreign key(idmedico) references medico(idmedico) on delete cascade
 );
 
 create table especialiadade(
