@@ -145,10 +145,10 @@ create table ocorrencia_medica(
 
 create table conta(
 	idconta int not null auto_increment,
-	idpaciente int not null,
+	idpaciente int,
 	pago boolean not null,
 	primary key(idconta),
-	foreign key(idpaciente) references paciente(idpaciente)
+	foreign key(idpaciente) references paciente(idpaciente) on delete set null
 );
 
 
