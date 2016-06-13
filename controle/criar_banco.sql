@@ -29,7 +29,8 @@ create table funcionario(
     salario float not null,
     data_pagamento varchar(2) not null,
     primary key(idfuncionario),
-    foreign key(idpessoa) references pessoa(idpessoa)
+    foreign key(idpessoa) references pessoa(idpessoa) on delete cascade,
+    unique(idpessoa)
 );
 
 create table expediente(
