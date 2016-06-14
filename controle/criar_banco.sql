@@ -86,12 +86,11 @@ create table paciente(
 );
 
 create table gerencia(
-	idgerencia int not null auto_increment,
     idrecepcionista int not null,
     idmedico int not null,
-    primary key(idgerencia),
     foreign key(idrecepcionista) references recepcionista(idrecepcionista) on delete cascade,
-    foreign key(idmedico) references medico(idmedico) on delete cascade
+    foreign key(idmedico) references medico(idmedico) on delete cascade,
+    unique(idrecepcionista, idmedico)
 );
 
 create table especialidade(
