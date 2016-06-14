@@ -3,7 +3,7 @@
 	<hr />
 </div>
 <?php  
-    $especialidades = run_select_many('select idespecialidade, nome from especialidade;');
+    $especialidades = run_select_many('select idespecialidade, nome_especialidade from especialidade;');
     // var_dump($especialidades);
 ?>
 <div class="table-responsive container center col-lg-3">
@@ -17,7 +17,7 @@
         <tbody>
         <?php foreach($especialidades as $index => $especialidade): ?>
             <tr>
-                <td><?php echo $especialidade['nome'] ?></td>
+                <td><?php echo $especialidade['nome_especialidade'] ?></td>
                 <td>
                     <a class='btn btn-info' data-toggle="modal"  data-target="#myModal<?php echo $especialidade['idespecialidade']; ?>">Alterar</a>
                 </td>
@@ -34,7 +34,7 @@
                                 <form method='post'>
                                     <input type='number' name='idespecialidade' value="<?php echo $especialidade['idespecialidade']; ?>" hidden placeholder='' />
                                     <div  class='form-group'>
-                                        <input class='form-control' type='text' name='nome' value="<?php echo $especialidade['nome']; ?>" placeholder='Nome' required />
+                                        <input class='form-control' type='text' name='nome' value="<?php echo $especialidade['nome_especialidade']; ?>" placeholder='Nome' required />
                                     </div>
                                     <input type='submit' value='Alterar' class='btn btn-primary' />
                                 </form>
