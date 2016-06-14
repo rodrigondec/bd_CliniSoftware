@@ -15,7 +15,7 @@
 	<form method='post'>
 		<div class='form-group col-lg-12'>
 		    <label for='nome'>Nome</label>
-		    <input type='text' name='nome' class='form-control' placeholder='Digite o nome aqui.'   />
+		    <input type='text' name='nome' class='form-control' placeholder='Digite o nome aqui'   />
 		</div>
 		<div class='form-group col-lg-7'>
 		    <label for='email'>Email</label>
@@ -57,12 +57,12 @@
 </div>
 <?php  
 	if(count($_POST) > 0){
-		var_dump($_POST); echo '<br><br>';
+		// var_dump($_POST); echo '<br><br>';
 		/* CADASTRO DE PESSOA OU VERIFICAÇÃO */
 		$pessoa = run_select('select * from pessoa where email=\''.$_POST['email'].'\';');
 		if($pessoa){ 
 			/* PESSOA JÁ EXISTE */
-			var_dump($pessoa);
+			// var_dump($pessoa);
 
 			$funcionario = run_select('select * from funcionario where idpessoa='.$pessoa['idpessoa'].';');
 			if(!$funcionario){
@@ -88,7 +88,7 @@
 				header('LOCATION: '.ADMINISTRADOR.'/listar_medicos');
 			}
 			else{
-				swal('Erro!', 'Essa pessoa já está cadastrada como um médico.', 'error', ADMINISTRADOR.'/cadastrar_medico', 'btn-danger');
+				swal('Erro!', 'Essa pessoa já está cadastrada como um médico', 'error', ADMINISTRADOR.'/cadastrar_medico', 'btn-danger');
 			}
 		}
 		else{
