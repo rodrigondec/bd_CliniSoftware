@@ -29,6 +29,8 @@
                             <ul class="dropdown-menu">
                                 <li><a href="<?php echo ADMINISTRADOR; ?>/listar_medicos">Listar</a></li>
                                 <li><a href="<?php echo ADMINISTRADOR; ?>/cadastrar_medico">Cadastrar</a></li>
+                                <li><a href="<?php echo ADMINISTRADOR; ?>/selecionar_medico_especialidade">Registrar Especialidade</a></li>
+                                <li><a href="<?php echo ADMINISTRADOR; ?>/listar_especializados">Listar Médicos Especializados</a></li>
                             </ul>
                         </li>
                         <li role="separator" class="divider"></li>
