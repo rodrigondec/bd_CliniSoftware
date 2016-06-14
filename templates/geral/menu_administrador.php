@@ -16,27 +16,6 @@
             <ul class="nav navbar-nav">
                 <li><a href="/<?php echo BASE; ?>admin">PHPMyAdmin</a></li>
                 <li class='dropdown'>
-                    <a href="#" class='dropdown-toggle' data-toggle='dropdown'>Médicos<span class="caret"></span></a>
-                    <ul class='dropdown-menu'>
-                        <li><a href="<?php echo ADMINISTRADOR; ?>/cadastrar_medico">Cadastrar</a></li>
-                        <li><a href="<?php echo ADMINISTRADOR; ?>/listar_medicos">Listar</a></li>
-                    </ul> 
-                </li>
-                <li class='dropdown'>
-                    <a href="#" class='dropdown-toggle' data-toggle='dropdown'>Especialidades<span class="caret"></span></a>
-                    <ul class='dropdown-menu'>
-                        <li><a href="<?php echo ADMINISTRADOR; ?>/cadastrar_especialidade">Cadastrar</a></li>
-                        <li><a href="<?php echo ADMINISTRADOR; ?>/listar_especialidades">Listar</a></li>
-                    </ul> 
-                </li>
-                <li class='dropdown'>
-                    <a href="#" class='dropdown-toggle' data-toggle='dropdown'>Expediente<span class="caret"></span></a>
-                    <ul class='dropdown-menu'>
-                        <li><a href="<?php echo ADMINISTRADOR; ?>/cadastrar_expediente">Cadastrar</a></li>
-                        <li><a href="<?php echo ADMINISTRADOR; ?>/listar_expedientes">Listar</a></li>
-                    </ul> 
-                </li>
-                <li class='dropdown'>
                     <a href="#" class='dropdown-toggle' data-toggle='dropdown'>Funcionário<span class="caret"></span></a>
                     <ul class='dropdown-menu'>
                         <li><a href="<?php echo ADMINISTRADOR; ?>/listar_funcionarios">Listar</a></li>
@@ -44,8 +23,48 @@
                             <a href="<?php echo ADMINISTRADOR; ?>/selecionar_funcionario_expediente">Registrar Expediente</a>
                         </li>
                         <li><a href="<?php echo ADMINISTRADOR; ?>/listar_cargas">Listar Cargas Horárias</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li class="dropdown-submenu">
+                            <a tabindex="-1" href="#">Médicos<div class='inline'><i class="fa fa-caret-right" style=''></i></div></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="<?php echo ADMINISTRADOR; ?>/listar_medicos">Listar</a></li>
+                                <li><a href="<?php echo ADMINISTRADOR; ?>/cadastrar_medico">Cadastrar</a></li>
+                            </ul>
+                        </li>
+                        <li role="separator" class="divider"></li>
+                        <li class="dropdown-submenu">
+                            <a tabindex="-1" href="#">Recepcionistas<div class='inline'><i class="fa fa-caret-right" style=''></i></div></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="<?php echo ADMINISTRADOR; ?>/listar_recepcionistas">Listar</a></li>
+                                <li><a href="<?php echo ADMINISTRADOR; ?>/cadastrar_recepcionista">Cadastrar</a></li>
+                                <li><a href="<?php echo ADMINISTRADOR; ?>/selecionar_recepcionista_gerencia">Registrar Gerencia de Médico</a></li>
+                            </ul>
+                        </li>
+                        <li role="separator" class="divider"></li>
+                        <li class="dropdown-submenu">
+                            <a tabindex="-1" href="#">Administradores<div class='inline'><i class="fa fa-caret-right" style=''></i></div></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="<?php echo ADMINISTRADOR; ?>/listar_administradores">Listar</a></li>
+                                <li><a href="<?php echo ADMINISTRADOR; ?>/cadastrar_administrador">Cadastrar</a></li>
+                            </ul>
+                        </li>
                     </ul> 
                 </li>
+                <li class='dropdown'>
+                    <a href="#" class='dropdown-toggle' data-toggle='dropdown'>Especialidades<span class="caret"></span></a>
+                    <ul class='dropdown-menu'>
+                        <li><a href="<?php echo ADMINISTRADOR; ?>/listar_especialidades">Listar</a></li>
+                        <li><a href="<?php echo ADMINISTRADOR; ?>/cadastrar_especialidade">Cadastrar</a></li>
+                    </ul> 
+                </li>
+                <li class='dropdown'>
+                    <a href="#" class='dropdown-toggle' data-toggle='dropdown'>Expediente<span class="caret"></span></a>
+                    <ul class='dropdown-menu'>
+                        <li><a href="<?php echo ADMINISTRADOR; ?>/listar_expedientes">Listar</a></li>
+                        <li><a href="<?php echo ADMINISTRADOR; ?>/cadastrar_expediente">Cadastrar</a></li>
+                    </ul> 
+                </li>
+
             </ul>
             <ul class="nav navbar-nav navbar-right">                
                 <li class='dropdown'>
