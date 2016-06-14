@@ -1,5 +1,5 @@
 <div class='text-center'>
-	<h2>Registrar Expediente</h2>
+	<h2>Registrar Expediente para Funcionário</h2>
 	<hr />
 </div>
 <?php  

@@ -53,7 +53,6 @@
 
         update($dados, 'especialidade', 'idespecialidade', $_POST['idespecialidade']);
         
-
         ob_clean();
         header('LOCATION: '.ADMINISTRADOR.'/listar_especialidades');
     }

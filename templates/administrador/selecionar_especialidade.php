@@ -1,5 +1,5 @@
 <div class='text-center'>
-	<h2>Registrar Especialidade</h2>
+	<h2>Registrar Especialização de Médico</h2>
 	<hr />
 </div>
 <?php  
