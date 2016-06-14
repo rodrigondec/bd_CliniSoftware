@@ -20,7 +20,7 @@
                     <ul class='dropdown-menu'>
                         <li><a href="<?php echo ADMINISTRADOR; ?>/listar_funcionarios">Listar</a></li>
                         <li>
-                            <a href="<?php echo ADMINISTRADOR; ?>/selecionar_funcionario_expediente">Registrar Expediente</a>
+                            <a href="<?php echo ADMINISTRADOR; ?>/selecionar_funcionario_expediente">Registrar Expediente para Funcionário</a>
                         </li>
                         <li><a href="<?php echo ADMINISTRADOR; ?>/listar_cargas">Listar Cargas Horárias</a></li>
                         <li role="separator" class="divider"></li>
@@ -29,7 +29,7 @@
                             <ul class="dropdown-menu">
                                 <li><a href="<?php echo ADMINISTRADOR; ?>/listar_medicos">Listar</a></li>
                                 <li><a href="<?php echo ADMINISTRADOR; ?>/cadastrar_medico">Cadastrar</a></li>
-                                <li><a href="<?php echo ADMINISTRADOR; ?>/selecionar_medico_especialidade">Registrar Especialidade</a></li>
+                                <li><a href="<?php echo ADMINISTRADOR; ?>/selecionar_medico_especialidade">Registrar Especialização de Médico</a></li>
                                 <li><a href="<?php echo ADMINISTRADOR; ?>/listar_especializados">Listar Médicos Especializados</a></li>
                             </ul>
                         </li>
