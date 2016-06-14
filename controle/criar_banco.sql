@@ -47,7 +47,8 @@ create table trabalha(
     idexpediente int not null,
     idfuncionario int not null,
     foreign key (idexpediente) references expediente(idexpediente) on delete cascade,
-    foreign key (idfuncionario) references funcionario(idfuncionario) on delete cascade
+    foreign key (idfuncionario) references funcionario(idfuncionario) on delete cascade,
+    unique(idfuncionario, idexpediente)
 );
 
 create table administrador(
