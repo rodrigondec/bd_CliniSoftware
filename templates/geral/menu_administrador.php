@@ -43,7 +43,7 @@
                         <li>
                             <a href="<?php echo ADMINISTRADOR; ?>/selecionar_funcionario_expediente">Registrar Expediente</a>
                         </li>
-                        
+                        <li><a href="<?php echo ADMINISTRADOR; ?>/listar_cargas">Listar Cargas Horárias</a></li>
                     </ul> 
                 </li>
             </ul>
