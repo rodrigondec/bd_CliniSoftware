@@ -3,7 +3,7 @@
 	<hr />
 </div>
 <?php  
-	$especializados = run_select_many('select nome, nome_especialidade, email from pessoa natural join funcionario natural join medico natural join especializado natural join especialidade;');
+	$especializados = run_select_many('select pessoa.nome, especialidade.nome as nome_especialidade, email from pessoa natural join funcionario natural join medico, especializado, especialidade where medico.idmedico=especializado.idmedico and especialidade.idespecialidade=especializado.idespecialidade;');
 	// var_dump($especializados);
 ?>
 <div class="table-responsive container center col-lg-9">
