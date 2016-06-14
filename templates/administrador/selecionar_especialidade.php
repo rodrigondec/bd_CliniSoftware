@@ -26,7 +26,7 @@
 		    	<option value="" selected disabled>Selecione uma especialidade</option>
 		    	<?php foreach($especialidades as $index => $especialidade): ?>
 				<option value="<?php echo $especialidade['idespecialidade']; ?>">
-					<?php echo $especialidade['nome_especialidade']; ?>
+					<?php echo $especialidade['nome']; ?>
 				</option>
 		    	<?php endforeach; ?>
 		    </select>

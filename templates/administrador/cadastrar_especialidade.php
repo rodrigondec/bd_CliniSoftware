@@ -6,7 +6,7 @@
 	<form method='post'>
 		<div class='form-group col-lg-12'>
 		    <label for='nome'>Nome</label>
-		    <input type='text' name='nome_especialidade' class='form-control' placeholder='Digite aqui a especialidade' required />
+		    <input type='text' name='nome' class='form-control' placeholder='Digite aqui a especialidade' required />
 		</div>
 		<div class='text-center'>
 			<button class='btn btn-danger' type='reset'>Apagar</button>
