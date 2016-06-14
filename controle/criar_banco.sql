@@ -101,12 +101,11 @@ create table especialidade(
 );
 
 create table especializado(
-	idespecializado int not null auto_increment,
     idmedico int not null,
     idespecialidade int not null,
-	primary key(idespecializado),
     foreign key(idmedico) references medico(idmedico) on delete cascade,
-    foreign key(idespecialidade) references especialidade(idespecialidade) on delete cascade
+    foreign key(idespecialidade) references especialidade(idespecialidade) on delete cascade,
+    unique(idmedico, idespecialidade)
 );
 
 create table mercancia(
