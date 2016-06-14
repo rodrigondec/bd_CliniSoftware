@@ -20,7 +20,7 @@
                     <ul class='dropdown-menu'>
                         <li><a href="<?php echo ADMINISTRADOR; ?>/listar_funcionarios">Listar</a></li>
                         <li>
-                            <a href="<?php echo ADMINISTRADOR; ?>/selecionar_funcionario_expediente">Registrar Expediente para Funcionário</a>
+                            <a href="<?php echo ADMINISTRADOR; ?>/selecionar_funcionario">Registrar Expediente para Funcionário</a>
                         </li>
                         <li><a href="<?php echo ADMINISTRADOR; ?>/listar_cargas">Listar Cargas Horárias</a></li>
                         <li role="separator" class="divider"></li>
@@ -39,7 +39,7 @@
                             <ul class="dropdown-menu">
                                 <li><a href="<?php echo ADMINISTRADOR; ?>/listar_recepcionistas">Listar</a></li>
                                 <li><a href="<?php echo ADMINISTRADOR; ?>/cadastrar_recepcionista">Cadastrar</a></li>
-                                <li><a href="<?php echo ADMINISTRADOR; ?>/selecionar_recepcionista_gerencia">Registrar Gerencia de Médico</a></li>
+                                <li><a href="<?php echo ADMINISTRADOR; ?>/selecionar_recepcionista">Registrar Gerencia de Médico</a></li>
                                 <li><a href="<?php echo ADMINISTRADOR; ?>/listar_gerencias">Listar Gerencias</a></li>
                             </ul>
                         </li>
@@ -85,7 +85,7 @@
                             <ul class="dropdown-menu">
                                 <li><a href="<?php echo ADMINISTRADOR; ?>/listar_procedimentos">Listar</a></li>
                                 <li><a href="<?php echo ADMINISTRADOR; ?>/cadastrar_procedimento">Cadastrar</a></li>
-                                <li><a href="<?php echo ADMINISTRADOR; ?>/selecionar_procedimento_produto">Registrar Inclusão de Produto</a></li>
+                                <li><a href="<?php echo ADMINISTRADOR; ?>/selecionar_procedimento">Registrar Inclusão de Produto</a></li>
                                 <li><a href="<?php echo ADMINISTRADOR; ?>/listar_incluidos">Listar Inclusões</a></li>
                             </ul>
                         </li>

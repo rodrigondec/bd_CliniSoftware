@@ -7,7 +7,7 @@
     // var_dump($recepcionistas);
 ?>
 <div class='container col-lg-5 center'>
-	<form method='post' action='<?php echo ADMINISTRADOR."/selecionar_medico" ?>'>
+	<form method='post' action='<?php echo ADMINISTRADOR."/selecionar_medico_gerencia" ?>'>
 		<div class='form-group col-lg-12'>
 		    <label for='recepcionista'>Recepcionista</label>
 		    <select class='form-control' name="idrecepcionista" required>

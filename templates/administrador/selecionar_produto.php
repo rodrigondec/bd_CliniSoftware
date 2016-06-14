@@ -10,7 +10,7 @@
 	// var_dump($procedimento);echo '<br><br>';
 ?>
 <div class='container col-lg-5 center'>
-	<form method='post' action='<?php echo ADMINISTRADOR."/registrar_produto" ?>'>
+	<form method='post' action='<?php echo ADMINISTRADOR."/registrar_inclusao" ?>'>
 		<input type="text" name='idprocedimento' value="<?php echo $procedimento['idprocedimento']; ?>" required hidden />
 		<div class='form-group col-lg-12'>
 		    <label for='nome'>Nome</label>
