@@ -170,7 +170,8 @@ create table inclui(
 	idproduto int not null,
 	idprocedimento int not null,
 	foreign key(idproduto) references produto(idproduto),
-	foreign key(idprocedimento) references procedimento(idprocedimento)
+	foreign key(idprocedimento) references procedimento(idprocedimento),
+	unique(idproduto, idprocedimento)
 );
 
 create table agenda(
