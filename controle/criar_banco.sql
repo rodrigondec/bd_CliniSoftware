@@ -210,3 +210,5 @@ insert into medico (idfuncionario) values (2);
 insert into gerencia (idrecepcionista, idmedico) values (1, 1);
 
 insert into paciente (idpessoa) values (4);
+
+insert into mercancia (nome) values ('consulta'), ('produto'), ('procedimento');
