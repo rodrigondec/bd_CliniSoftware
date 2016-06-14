@@ -66,6 +66,6 @@
 		insert($_POST, 'expediente');
 
 		ob_clean();
-        header('LOCATION: '.ADMINISTRADOR.'/listar_expedientess');
+        header('LOCATION: '.ADMINISTRADOR.'/listar_expedientes');
 	}
 ?>
