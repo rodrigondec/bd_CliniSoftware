@@ -96,7 +96,7 @@ create table gerencia(
 
 create table especialidade(
 	idespecialidade int not null auto_increment,
-    nome varchar(45) not null,
+    nome_especialidade varchar(45) not null,
 	primary key(idespecialidade)
 );
 
