@@ -15,7 +15,7 @@
                 <th>CPF</th>
                 <th>Cadastro Único</th>
                 <th class='col-lg-1'></th>
-                <th class='col-lg-1'</th>
+                <th class='col-lg-1'></th>
             </tr>
         </thead>
         <tbody>
