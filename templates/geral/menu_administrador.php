@@ -40,6 +40,7 @@
                                 <li><a href="<?php echo ADMINISTRADOR; ?>/listar_recepcionistas">Listar</a></li>
                                 <li><a href="<?php echo ADMINISTRADOR; ?>/cadastrar_recepcionista">Cadastrar</a></li>
                                 <li><a href="<?php echo ADMINISTRADOR; ?>/selecionar_recepcionista_gerencia">Registrar Gerencia de Médico</a></li>
+                                <li><a href="<?php echo ADMINISTRADOR; ?>/listar_gerencias">Listar Gerencias</a></li>
                             </ul>
                         </li>
                         <li role="separator" class="divider"></li>
