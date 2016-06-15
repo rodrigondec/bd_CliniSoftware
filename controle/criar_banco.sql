@@ -180,7 +180,8 @@ create table agenda(
 	idconsulta int,
 	foreign key(idpaciente) references paciente(idpaciente) on delete cascade,
 	foreign key(idmedico) references medico(idmedico) on delete cascade,
-	foreign key(idconsulta) references consulta(idconsulta) on delete cascade
+	foreign key(idconsulta) references consulta(idconsulta) on delete cascade,
+	unique(idconsulta)
 );
 
 insert into pessoa (telefone, cpf, data_nascimento, email, nome) values 
