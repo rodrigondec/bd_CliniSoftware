@@ -20,7 +20,7 @@
                     <ul class='dropdown-menu'>
                         <li><a href="<?php echo ADMINISTRADOR; ?>/listar_funcionarios">Listar</a></li>
                         <li>
-                            <a href="<?php echo ADMINISTRADOR; ?>/selecionar_funcionario">Registrar Expediente para Funcionário</a>
+                            <a href="<?php echo ADMINISTRADOR; ?>/selecionar_funcionario">Registrar Carga Horária</a>
                         </li>
                         <li><a href="<?php echo ADMINISTRADOR; ?>/listar_cargas">Listar Cargas Horárias</a></li>
                         <li role="separator" class="divider"></li>
