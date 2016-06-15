@@ -40,10 +40,9 @@
             <?php if(!$ignorar_medico): ?>
                 <th>Medico</th>
             <?php endif; ?>
-                <th>Hora</th>
-                <th>Data</th>
-                <th>Preço</th>
-                <th></th>
+                <th class='col-lg-1'>Hora</th>
+                <th class='col-lg-2'>Data</th>
+                <th class='col-lg-1'>Preço</th>
             </tr>
         </thead>
         <tbody>

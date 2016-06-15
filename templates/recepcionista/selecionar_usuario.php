@@ -1,5 +1,5 @@
 <div class='text-center'>
-	<h2>Selecionar Usuário</h2>
+	<h2>Visualizar Agenda</h2>
 	<hr />
 </div>
 <div class='container col-lg-5 center'>
