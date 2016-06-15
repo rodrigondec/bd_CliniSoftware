@@ -49,7 +49,7 @@
 		    <label for='data_pagamento'>Data de Pagamento</label>
 		    <input id='data' type='number' name='data_pagamento' class='form-control' placeholder='Digite aqui a data' min='03' max='20' required  />
 		</div>
-		<div class='text-center'>
+		<div class='text-center col-lg-12'>
 			<button class='btn btn-danger' type='reset'>Apagar</button>
             <button class='btn btn-primary' type='submit'>Cadastrar</button>
 		</div>

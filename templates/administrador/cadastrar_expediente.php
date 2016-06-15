@@ -55,7 +55,7 @@
 		    <label for='hora_final_expediente'>Hora Final do Intervalo</label>
 		    <input id='hora_final_intervalo' type='text' name='hora_final_intervalo' class='form-control' placeholder='Hora final'  required />
 		</div>
-		<div class='text-center'>
+		<div class='text-center col-lg-12'>
 			<button class='btn btn-danger' type='reset'>Apagar</button>
             <button class='btn btn-primary' type='submit'>Cadastrar</button>
 		</div>

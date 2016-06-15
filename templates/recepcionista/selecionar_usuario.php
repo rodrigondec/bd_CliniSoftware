@@ -16,7 +16,7 @@
 				<option value='medico'>Médico</option>
 			</select>
 		</div>
-		<div class='text-center'>
+		<div class='text-center col-lg-12'>
 			<button class='btn btn-danger' type='reset'>Apagar</button>
             <button class='btn btn-primary' type='submit'>Prosseguir</button>
 		</div>

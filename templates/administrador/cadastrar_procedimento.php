@@ -17,7 +17,7 @@
 		    <label for='preco'>Preço</label>
 		    <input id='preco' type='number' step='any' name='preco' class='form-control' placeholder='Digite aqui preço' required />
 		</div>
-		<div class='text-center'>
+		<div class='text-center col-lg-12'>
 			<button class='btn btn-danger' type='reset'>Apagar</button>
             <button class='btn btn-primary' type='submit'>Cadastrar</button>
 		</div>
