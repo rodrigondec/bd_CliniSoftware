@@ -1,12 +1,12 @@
 <div class='text-center'>
-	<h2>Listar Produtos Incluidos</h2>
+	<h2>Listar Inclusões de Produtos</h2>
 	<hr />
 </div>
 <?php  
 	$incluidos = run_select_many('select procedimento.nome as nome_procedimento, produto.nome as nome_produto from procedimento, inclui, produto where procedimento.idprocedimento=inclui.idprocedimento and produto.idproduto=inclui.idproduto;');
 	// var_dump($incluidos);
 ?>
-<div class="table-responsive container center col-lg-6">
+<div class="table-responsive container center col-lg-5">
     <table class="table table-striped table-hover table-condensed">
         <thead> 
             <tr>
