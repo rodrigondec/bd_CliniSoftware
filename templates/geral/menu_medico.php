@@ -18,7 +18,7 @@
                 <li class='dropdown'>
                     <a href="#" class='dropdown-toggle' data-toggle='dropdown'>Paciente<span class="caret"></span></a>
                     <ul class='dropdown-menu'>
-                        <li><a href="<?php echo MEDICO; ?>/visualizar_historico">Visualizar Histórico</a></li>
+                        <li><a href="<?php echo MEDICO; ?>/selecionar_paciente">Visualizar Histórico</a></li>
                         <li><a href="<?php echo MEDICO; ?>/cadastrar_ocorrencia">Adicionar Ocorrência</a></li>
                     </ul> 
                 </li>
