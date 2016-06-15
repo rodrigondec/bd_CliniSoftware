@@ -12,9 +12,9 @@
 			$ignorar_paciente = true;
 		}
 		else if(isset($_SESSION['idmedico'])){
-			echo '<h3 class="text-center">Sou um medico</h3>';
-			$historico = run_select_many('select hora, data, preco, nome as nome_paciente from historico natural join ocorrencia natural join pessoa natural join paciente where historico.idmedico='.$_SESSION['idmedico'].' and data > \''.date('Y-m-d').'\' order by data;');
-			var_dump($historico);
+			// echo '<h3 class="text-center">Sou um medico</h3>';
+			$historico = run_select_many('select nome, data, diagnostico from pessoa natural join paciente natural join ocorrencia_medica where idpaciente='.$_POST['idpaciente'].' order by data;');
+			// var_dump($historico);
 			$ignorar_medico = true;
 		}
 ?>
@@ -33,7 +33,7 @@
         <?php foreach($historico as $index => $ocorrencia): ?>
             <tr>
             <?php if(!$ignorar_paciente): ?>
-                <td><?php echo $consulta['nome'] ?></td>
+                <td><?php echo $ocorrencia['nome'] ?></td>
             <?php endif; ?>
                 <td><?php echo $ocorrencia['data'] ?></td>
                 <td><?php echo $ocorrencia['diagnostico'] ?></td>
