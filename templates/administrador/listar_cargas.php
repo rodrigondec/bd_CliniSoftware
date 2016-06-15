@@ -15,7 +15,6 @@
                 <th>Dia da semana</th>
                 <th>Hora inicial</th>
                 <th>Hora final</th>
-                <th class='col-lg-1'></th>
             </tr>
         </thead>
         <tbody>
@@ -26,7 +25,6 @@
                 <td><?php echo $carga['dia_semana'] ?></td>
                 <td><?php echo $carga['hora_inicial_expediente'] ?></td>
                 <td><?php echo $carga['hora_final_expediente'] ?></td>
-                <td><a href="#">?</a></td>
             </tr>
         <?php endforeach; ?>
         </tbody>

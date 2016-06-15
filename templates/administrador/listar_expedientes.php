@@ -10,7 +10,7 @@
     <table class="table table-striped table-hover table-condensed">
         <thead> 
             <tr>
-                <th>Nome</th>
+                <th>Dia da Semana</th>
                 <th>Hora Incial Expediente</th>
                 <th>Hora final Expediente</th>
                 <th>Hora Incial Intervalo</th>
@@ -45,16 +45,16 @@
                                         <input class='form-control' type='text' name='dia_semana' value="<?php echo $expediente['dia_semana']; ?>" placeholder='Dia da semana' required />
                                     </div>
                                     <div  class='form-group'>
-                                        <input class='form-control' type='text' name='hora_inicial_expediente' value="<?php echo $expediente['hora_inicial_expediente']; ?>" placeholder='Hora inicial expediente' required />
+                                        <input class='form-control' type='text' data-mask='00:00' name='hora_inicial_expediente' value="<?php echo $expediente['hora_inicial_expediente']; ?>" placeholder='Hora inicial expediente' required />
                                     </div>
                                     <div  class='form-group'>
-                                        <input class='form-control' type='text' name='hora_final_expediente' value="<?php echo $expediente['hora_final_expediente']; ?>" placeholder='Hora final expediente' required />
+                                        <input class='form-control' type='text' data-mask='00:00' name='hora_final_expediente' value="<?php echo $expediente['hora_final_expediente']; ?>" placeholder='Hora final expediente' required />
                                     </div>
                                     <div  class='form-group'>
-                                        <input class='form-control' type='text' name='hora_inicial_intervalo' value="<?php echo $expediente['hora_inicial_intervalo']; ?>" placeholder='Hora inicial intervalo' required />
+                                        <input class='form-control' type='text' data-mask='00:00' name='hora_inicial_intervalo' value="<?php echo $expediente['hora_inicial_intervalo']; ?>" placeholder='Hora inicial intervalo' />
                                     </div>
                                     <div  class='form-group'>
-                                        <input class='form-control' type='text' name='hora_final_intervalo' value="<?php echo $expediente['hora_final_intervalo']; ?>" placeholder='Hora final intervalo' required />
+                                        <input class='form-control' type='text' data-mask='00:00' name='hora_final_intervalo' value="<?php echo $expediente['hora_final_intervalo']; ?>" placeholder='Hora final intervalo' />
                                     </div>
                                     <input type='submit' value='Alterar' class='btn btn-primary' />
                                 </form>

@@ -26,7 +26,16 @@
 		    	<option value="" selected disabled>Selecione um expediente</option>
 		    	<?php foreach($expedientes as $index => $expediente): ?>
 				<option value="<?php echo $expediente['idexpediente']; ?>">
-					<?php echo $expediente['dia_semana']; ?>
+					<?php 
+						echo $expediente['dia_semana'].' das '.$expediente['hora_inicial_expediente'].' às '.$expediente['hora_final_expediente'].'. ';
+						if($expediente['hora_inicial_intervalo'] == '' or $expediente['hora_inicial_intervalo'] == null){
+							echo 'Sem intervalo';
+						}
+						else{
+							echo 'Com intevalo das '.$expediente['hora_inicial_intervalo'].' às '.$expediente['hora_final_intervalo']; 
+						}
+						echo '.';
+					?>
 				</option>
 		    	<?php endforeach; ?>
 		    </select>
