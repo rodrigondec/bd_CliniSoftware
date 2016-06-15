@@ -31,8 +31,8 @@
                         <li role="separator" class="divider"></li>
                         <li><a href="#" <?php echo "onclick='log_out(\"".BASE."\")'"; ?>>Sair</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="<?php echo SISTEMA; ?>/swap?tipo=paciente">Trocar para paciente</a></li>
                         <li><a href="<?php echo SISTEMA; ?>/swap?tipo=administrador">Trocar para administrador</a></li>
+                        <li><a href="<?php echo SISTEMA; ?>/swap?tipo=paciente">Trocar para paciente</a></li>
                         <li><a href="<?php echo SISTEMA; ?>/swap?tipo=recepcionista">Trocar para recepcionista</a></li>
                     </ul>
                 </li>
