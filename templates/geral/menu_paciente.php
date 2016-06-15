@@ -23,7 +23,7 @@
                         <li><a href="<?php echo PACIENTE; ?>/desmarcar_consulta">Desmarcar</a></li>
                     </ul> 
                 </li>
-                <li><a href="<?php echo PACIENTE; ?>/visualizar_historico">Meu Histórico</a></li>
+                <li><a href="<?php echo SISTEMA; ?>/visualizar_historico">Meu Histórico</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">                
                 <li class='dropdown'>
