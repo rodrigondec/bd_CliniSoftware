@@ -37,9 +37,9 @@ create table expediente(
 	idexpediente int not null auto_increment,
     hora_inicial_expediente varchar(5) not null,
 	hora_final_expediente varchar(5) not null,
-	hora_inicial_intervalo varchar(5) not null,
-	hora_final_intervalo varchar(5) not null,
-    dia_semana varchar(13) not null,
+	dia_semana varchar(13) not null,
+	hora_inicial_intervalo varchar(5) default null,
+	hora_final_intervalo varchar(5) default null,
     primary key (idexpediente)
 );
 
@@ -230,3 +230,9 @@ insert into inclui(idprocedimento, idproduto) values (1, 1);
 insert into especialidade (nome) values ('Neurologista');
 
 insert into especializado (idmedico, idespecialidade) values (1, 1);
+
+insert into expediente (hora_inicial_expediente, hora_final_expediente, dia_semana, hora_inicial_intervalo, hora_final_intervalo) values 
+	('07:15', '17:45', 'Segunda-Feira', '12:00', '14:00');
+
+insert into expediente (hora_inicial_expediente, hora_final_expediente, dia_semana) values 
+	('08:00', '11:30', 'Terça-Feira');
