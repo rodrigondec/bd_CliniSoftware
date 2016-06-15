@@ -129,7 +129,8 @@ create table ocorrencia_medica(
     data date not null,
     diagnostico varchar(45) not null,
 	primary key(idocorrencia_medica),
-	foreign key(idpaciente) references paciente(idpaciente) on delete cascade
+	foreign key(idpaciente) references paciente(idpaciente) on delete cascade,
+	unique(idpaciente, data, diagnostico)
 );
 
 create table conta(
