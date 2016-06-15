@@ -19,7 +19,7 @@
                     <a href="#" class='dropdown-toggle' data-toggle='dropdown'>Consultas<span class="caret"></span></a>
                     <ul class='dropdown-menu'>
                         <li><a href="<?php echo RECEPCIONISTA; ?>/escolher_especialidade">Marcar</a></li>
-                        <li><a href="<?php echo RECEPCIONISTA; ?>/desmarcar_consulta">Desmarcar</a></li>
+                        <li><a href="<?php echo RECEPCIONISTA; ?>/buscar_paciente">Desmarcar</a></li>
                     </ul> 
                 </li>
             </ul>
