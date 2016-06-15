@@ -5,7 +5,7 @@ USE CliniSoftware;
 create table pessoa(
 	idpessoa int not null auto_increment,
 	telefone varchar(15) not null,
-    cpf varchar(14),
+    cpf varchar(14) not null,
     data_nascimento date not null,
     email varchar(45),
     nome varchar(60) not null,
@@ -186,10 +186,10 @@ create table agenda(
 
 insert into pessoa (telefone, cpf, data_nascimento, email, nome) values 
 	('(84) 99818-4097', '016.887.454-75', '1994-12-27', 'rodrigo@gmail.com', 'Rodrigo Nunes de Castro'),
-	('(84) 99166-5652', null, '1994-12-26', 'fernanda@gmail.com', 'Fernanda Chacon Fountoura'),
-	('(84) 11111-1111', null, '1994-12-25', 'major@gmail.com', 'Major Fulano de Testes'),
-	('(84) 22222-2222', null, '1994-12-24', 'marcel@gmail.com', 'Marcel Professor Soberano'),
-	('(84) 33333-3333', null, '1994-12-23', 'francisco@gmail.com', 'francisco Monitor de Tal');
+	('(84) 99166-5652', '111.111.111-11', '1994-12-26', 'fernanda@gmail.com', 'Fernanda Chacon Fountoura'),
+	('(84) 11111-1111', '222.222.222-22', '1994-12-25', 'major@gmail.com', 'Major Fulano de Testes'),
+	('(84) 22222-2222', '333.333.333-33', '1994-12-24', 'marcel@gmail.com', 'Marcel Professor Soberano'),
+	('(84) 33333-3333', '444.444.444-44', '1994-12-23', 'francisco@gmail.com', 'francisco Monitor de Tal');
 
 insert into usuario (senha, idpessoa) values 
 	(md5('rodrigo'), 1),
