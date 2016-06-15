@@ -86,7 +86,7 @@
                                 <li><a href="<?php echo ADMINISTRADOR; ?>/listar_procedimentos">Listar</a></li>
                                 <li><a href="<?php echo ADMINISTRADOR; ?>/cadastrar_procedimento">Cadastrar</a></li>
                                 <li><a href="<?php echo ADMINISTRADOR; ?>/selecionar_procedimento">Registrar Inclusão de Produto</a></li>
-                                <li><a href="<?php echo ADMINISTRADOR; ?>/listar_incluidos">Listar Inclusões</a></li>
+                                <li><a href="<?php echo ADMINISTRADOR; ?>/listar_inclusoes">Listar Inclusões</a></li>
                             </ul>
                         </li>
                     </ul> 
