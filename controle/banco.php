@@ -31,7 +31,7 @@
     }
 
     function run_select_many($sql){
-        // var_dump($sql);echo '<br><br>';
+        var_dump($sql);echo '<br><br>';
         $resultado = mysql_query($sql, LINK);
         try {
             if(!$resultado){
