@@ -214,3 +214,7 @@ insert into gerencia (idrecepcionista, idmedico) values (1, 1);
 insert into paciente (idpessoa) values (4);
 
 insert into mercancia (nome) values ('consulta'), ('produto'), ('procedimento');
+
+insert into consulta (hora, data, preco, idmercancia) values ('10:50', '2016-06-25', 120.00, 1) ,('10:50', '2016-06-10', 120.00, 1), ('10:50', '2016-06-20', 120.00, 1);
+
+insert into agenda (idpaciente, idmedico, idconsulta) values (1, 1, 1), (1, 1, 2), (1, 1, 3);
