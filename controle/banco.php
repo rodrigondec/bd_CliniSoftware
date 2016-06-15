@@ -1,6 +1,6 @@
 <?php
     function run($sql){
-        // var_dump($sql);echo '<br><br>';
+        var_dump($sql);echo '<br><br>';
         try {
             if(!mysql_query($sql, LINK)){
                 throw new Exception(mysql_error(LINK));
@@ -15,7 +15,7 @@
     }
 
     function run_select($sql){
-        // var_dump($sql);echo '<br><br>';
+        var_dump($sql);echo '<br><br>';
         $resultado = mysql_query($sql, LINK);
         try {
             if(!$resultado){
