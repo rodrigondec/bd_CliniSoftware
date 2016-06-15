@@ -1,5 +1,5 @@
 <div class='text-center'>
-	<h2>Registrar Expediente para Funcionário</h2>
+	<h2>Registrar Carga Horária para Funcionário</h2>
 	<hr />
 </div>
 <?php  
@@ -10,7 +10,7 @@
     // var_dump($funcionario);
 ?>
 <div class='container col-lg-5 center'>
-	<form method='post' action='<?php echo ADMINISTRADOR."/registrar_expediente" ?>'>
+	<form method='post' action='<?php echo ADMINISTRADOR."/registrar_carga" ?>'>
 		<input type="text" name='idfuncionario' value="<?php echo $funcionario['idfuncionario']; ?>" required hidden />
 		<div class='form-group col-lg-6'>
 		    <label for='nome'>Nome</label>
