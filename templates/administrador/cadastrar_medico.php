@@ -15,7 +15,7 @@
 	<form method='post'>
 		<div class='form-group col-lg-12'>
 		    <label for='nome'>Nome</label>
-		    <input type='text' name='nome' class='form-control' placeholder='Digite o nome aqui'   />
+		    <input type='text' name='nome' class='form-control' placeholder='Digite o nome aqui' required  />
 		</div>
 		<div class='form-group col-lg-7'>
 		    <label for='email'>Email</label>
@@ -23,31 +23,31 @@
 		</div>
 		<div class='form-group  col-lg-5'>
 		    <label for='telefone'>Telefone</label>
-		    <input id="telefone" type='text' name='telefone' class='form-control' placeholder='Digite aqui o email'   />
+		    <input id="telefone" type='text' name='telefone' class='form-control' placeholder='Digite aqui o telefone' required  />
 		</div>
 		<div class='form-group col-lg-7'>
 		    <label for='cpf'>CPF</label>
-		    <input id="cpf" type='text' name='cpf' class='form-control' placeholder='Digite o cpf aqui.'   />
+		    <input id="cpf" type='text' name='cpf' class='form-control' placeholder='Digite o cpf aqui' required />
 		</div>
 		<div class='form-group col-lg-5'>
 		    <label for='data'>Data de Nascimento</label>
-		    <input type='date' name='data_nascimento' class='form-control' placeholder='Digite a data de nascimento aqui'   />
+		    <input type='date' name='data_nascimento' class='form-control' placeholder='Digite a data de nascimento aqui' required  />
 		</div>
 		<div class='form-group col-lg-7'>
 		    <label for='cadastro_unico'>Cadastro Único</label>
-		    <input type='text' name='cadastro_unico' class='form-control' placeholder='Digite aqui o cadastro único'   />
+		    <input type='text' name='cadastro_unico' class='form-control' placeholder='Digite aqui o cadastro único' required  />
 		</div>
 		<div class='form-group col-lg-5'>
 		    <label for='preco'>Preço Consulta</label>
-		    <input id="preco" type='text' name='preco_padrao' class='form-control' placeholder='Digite aqui o preço'   />
+		    <input id="preco" type='text' name='preco_padrao' class='form-control' placeholder='Digite aqui o preço' required  />
 		</div>
 		<div class='form-group col-lg-7'>
 		    <label for='salario'>Salário</label>
-		    <input id='salario' type='number' name='salario' class='form-control' placeholder='Digite aqui o salário' min='500'  />
+		    <input id='salario' type='number' name='salario' class='form-control' placeholder='Digite aqui o salário' min='500' required />
 		</div>
 		<div class='form-group col-lg-5'>
 		    <label for='data_pagamento'>Data de Pagamento</label>
-		    <input id='data' type='number' name='data_pagamento' class='form-control' placeholder='Digite aqui a data' min='03' max='20'   />
+		    <input id='data' type='number' name='data_pagamento' class='form-control' placeholder='Digite aqui a data' min='03' max='20' required  />
 		</div>
 		<div class='text-center'>
 			<button class='btn btn-danger' type='reset'>Apagar</button>
@@ -59,10 +59,11 @@
 	if(count($_POST) > 0){
 		// var_dump($_POST); echo '<br><br>';
 		/* CADASTRO DE PESSOA OU VERIFICAÇÃO */
+
 		$pessoa = run_select('select * from pessoa where email=\''.$_POST['email'].'\';');
 		if($pessoa){ 
 			/* PESSOA JÁ EXISTE */
-			// var_dump($pessoa);
+			var_dump($pessoa);
 
 			$funcionario = run_select('select * from funcionario where idpessoa='.$pessoa['idpessoa'].';');
 			if(!$funcionario){
@@ -99,6 +100,7 @@
 			$pessoa['telefone'] = $_POST['telefone'];
 			$pessoa['email'] = $_POST['email'];
 			$pessoa['cpf'] = $_POST['cpf'];
+			var_dump($pessoa);echo '<br><br>';
 
 			insert($pessoa, 'pessoa');
 			$idpessoa = run_select('select max(idpessoa) from pessoa;');
@@ -107,6 +109,7 @@
 			$funcionario['idpessoa'] = $idpessoa['max(idpessoa)'];
 			$funcionario['salario'] = $_POST['salario'];
 			$funcionario['data_pagamento'] = $_POST['data_pagamento'];
+			var_dump($funcionario);echo '<br><br>';
 
 			insert($funcionario, 'funcionario');
 			$idfuncionario = run_select('select max(idfuncionario) from funcionario;');
@@ -115,6 +118,7 @@
 			$medico['preco_padrao'] = $_POST['preco_padrao'];
 			$medico['cadastro_unico'] = $_POST['cadastro_unico'];
 			$medico['idfuncionario'] = $idfuncionario['max(idfuncionario)'];
+			var_dump($medico);echo '<br><br>';
 
 			insert($medico, 'medico');
 

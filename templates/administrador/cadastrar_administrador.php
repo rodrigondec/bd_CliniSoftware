@@ -14,31 +14,31 @@
 	<form method='post'>
 		<div class='form-group col-lg-12'>
 		    <label for='nome'>Nome</label>
-		    <input type='text' name='nome' class='form-control' placeholder='Digite o nome aqui'   />
+		    <input type='text' name='nome' class='form-control' placeholder='Digite o nome aqui' required />
 		</div>
 		<div class='form-group col-lg-7'>
 		    <label for='email'>Email</label>
-		    <input type='email' name='email' class='form-control' placeholder='Digite aqui o email'  required />
+		    <input type='email' name='email' class='form-control' placeholder='Digite aqui o email' required />
 		</div>
 		<div class='form-group  col-lg-5'>
 		    <label for='telefone'>Telefone</label>
-		    <input id="telefone" type='text' name='telefone' class='form-control' placeholder='Digite aqui o email'   />
+		    <input id="telefone" type='text' name='telefone' class='form-control' placeholder='Digite aqui o telefone' required />
 		</div>
 		<div class='form-group col-lg-7'>
 		    <label for='cpf'>CPF</label>
-		    <input id="cpf" type='text' name='cpf' class='form-control' placeholder='Digite o cpf aqui.'   />
+		    <input id="cpf" type='text' name='cpf' class='form-control' placeholder='Digite o cpf aqui' required />
 		</div>
 		<div class='form-group col-lg-5'>
 		    <label for='data'>Data de Nascimento</label>
-		    <input type='date' name='data_nascimento' class='form-control' placeholder='Digite a data de nascimento aqui'   />
+		    <input type='date' name='data_nascimento' class='form-control' placeholder='Digite a data de nascimento aqui' required />
 		</div>
 		<div class='form-group col-lg-7'>
 		    <label for='salario'>Salário</label>
-		    <input id='salario' type='number' name='salario' class='form-control' placeholder='Digite aqui o salário' min='500'  />
+		    <input id='salario' type='number' step='any' name='salario' class='form-control' placeholder='Digite aqui o salário' min='500' required />
 		</div>
 		<div class='form-group col-lg-5'>
 		    <label for='data_pagamento'>Data de Pagamento</label>
-		    <input id='data' type='number' name='data_pagamento' class='form-control' placeholder='Digite aqui a data' min='03' max='20'   />
+		    <input id='data' type='number' name='data_pagamento' class='form-control' placeholder='Digite aqui a data' min='03' max='20' required />
 		</div>
 		<div class='text-center'>
 			<button class='btn btn-danger' type='reset'>Apagar</button>
