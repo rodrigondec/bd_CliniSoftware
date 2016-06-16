@@ -20,6 +20,7 @@
                     <a href="#" class='dropdown-toggle' data-toggle='dropdown'>Conta<span class="caret"></span></a>
                     <ul class='dropdown-menu'>
                         <li><a href="<?php echo RECEPCIONISTA; ?>/selecionar_paciente?next=gerar_conta">Gerar Conta</a></li>
+                        <li><a href="<?php echo RECEPCIONISTA; ?>/selecionar_paciente?next=selecionar_produto">Registrar Produto em Conta</a></li>
                         <li role="separator" class="divider"></li>
                         <li><a href="<?php echo RECEPCIONISTA; ?>/selecionar_paciente?next=pagar_conta">Pagar Conta</a></li>
                     </ul> 
