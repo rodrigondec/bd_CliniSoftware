@@ -1,0 +1,10 @@
+Toda a documentação do projeto CliniSoftware está na pasta documentação. Incluindo:
+
+Documento de Visão
+Documento de Casos de uso
+Modelo Astah
+Modelagem ER
+Modelagem ERR
+Modelo MySQL WorkBench
+Arquivos de Normalização do Prolog
+Slide de Apresentação
