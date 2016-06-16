@@ -119,7 +119,7 @@ create table consulta(
     data date not null,
     preco float,
 	primary key(idconsulta),
-    foreign key(idmercancia) references mercancia(idmercancia),
+    foreign key(idmercancia) references mercancia(idmercancia) on delete cascade,
     foreign key(idexpediente) references expediente(idexpediente)
 );
 
