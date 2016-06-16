@@ -115,11 +115,12 @@ create table mercancia(
 create table consulta(
 	idconsulta int not null auto_increment,
     idmercancia int not null,
-    hora varchar(5) not null,
+    idexpediente int not null,
     data date not null,
-    preco float not null,
+    preco float,
 	primary key(idconsulta),
-    foreign key(idmercancia) references mercancia(idmercancia)
+    foreign key(idmercancia) references mercancia(idmercancia),
+    foreign key(idexpediente) references expediente(idexpediente)
 );
 
 create table ocorrencia_medica(
