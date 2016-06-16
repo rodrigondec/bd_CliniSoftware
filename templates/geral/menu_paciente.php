@@ -16,13 +16,7 @@
         <div id='navbar' class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 <li><a href="<?php echo SISTEMA; ?>/visualizar_agenda">Minha Agenda</a></li>
-                <li class='dropdown'>
-                    <a href="#" class='dropdown-toggle' data-toggle='dropdown'>Consultas<span class="caret"></span></a>
-                    <ul class='dropdown-menu'>
-                        <li><a href="<?php echo PACIENTE; ?>/escolher_especialidade">Marcar</a></li>
-                        <li><a href="<?php echo PACIENTE; ?>/desmarcar_consulta">Desmarcar</a></li>
-                    </ul> 
-                </li>
+                <li><a href="<?php echo PACIENTE; ?>/escolher_especialidade">Marcar Consulta</a></li>
                 <li><a href="<?php echo SISTEMA; ?>/visualizar_historico">Meu Histórico</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">                

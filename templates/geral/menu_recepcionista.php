@@ -15,13 +15,7 @@
         <div id='navbar' class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 <li><a href="<?php echo RECEPCIONISTA; ?>/selecionar_usuario">Visualizar Agenda</a></li>
-                <li class='dropdown'>
-                    <a href="#" class='dropdown-toggle' data-toggle='dropdown'>Consultas<span class="caret"></span></a>
-                    <ul class='dropdown-menu'>
-                        <li><a href="<?php echo RECEPCIONISTA; ?>/escolher_especialidade">Marcar</a></li>
-                        <li><a href="<?php echo RECEPCIONISTA; ?>/buscar_paciente">Desmarcar</a></li>
-                    </ul> 
-                </li>
+                <li><a href="<?php echo RECEPCIONISTA; ?>/escolher_especialidade">Marcar Consulta</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">                
                 <li class='dropdown'>
