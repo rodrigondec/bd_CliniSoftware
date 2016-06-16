@@ -16,6 +16,13 @@
             <ul class="nav navbar-nav">
                 <li><a href="<?php echo RECEPCIONISTA; ?>/selecionar_usuario">Visualizar Agenda</a></li>
                 <li><a href="<?php echo SISTEMA; ?>/escolher_especialidade">Marcar Consulta</a></li>
+                <li class='dropdown'>
+                    <a href="#" class='dropdown-toggle' data-toggle='dropdown'>Conta<span class="caret"></span></a>
+                    <ul class='dropdown-menu'>
+                        <li><a href="<?php echo RECEPCIONISTA; ?>/selecionar_paciente?next=gerar_conta">Gerar Conta</a></li>
+                    </ul> 
+                </li>
+                
             </ul>
             <ul class="nav navbar-nav navbar-right">                
                 <li class='dropdown'>
