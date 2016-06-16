@@ -25,5 +25,5 @@
 	insert($agenda, 'agenda');
 
 	ob_clean();
-	header('LOCATION: '.SISTEMA.'/visualizar_agenda');
+	header('LOCATION: /'.BASE);
 ?>

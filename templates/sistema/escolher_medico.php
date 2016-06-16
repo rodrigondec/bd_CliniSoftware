@@ -9,7 +9,7 @@
 	// var_dump($medicos);
 ?>
 <div class='container col-lg-5 center'>
-	<form method='post' action='<?php echo PACIENTE."/escolher_horario" ?>'>
+	<form method='post' action='<?php echo SISTEMA."/escolher_horario" ?>'>
 		<div class='form-group col-lg-12'>
 		    <label for='especialidade'>Especialidade</label>
 		    <input type='text' class='form-control' value="<?php echo $especialidade['nome']; ?>" disabled />
@@ -27,7 +27,7 @@
 		</div>
 		<div class='text-center col-lg-12'>
 			<button class='btn btn-danger' type='reset'>Apagar</button>
-            <button class='btn btn-primary' type='submit'>Buscar horários</button>
+            <button class='btn btn-primary' type='submit'>Prosseguir</button>
 		</div>
 	</form>
 </div>

@@ -15,7 +15,7 @@
         <div id='navbar' class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 <li><a href="<?php echo RECEPCIONISTA; ?>/selecionar_usuario">Visualizar Agenda</a></li>
-                <li><a href="<?php echo RECEPCIONISTA; ?>/escolher_especialidade">Marcar Consulta</a></li>
+                <li><a href="<?php echo SISTEMA; ?>/escolher_especialidade">Marcar Consulta</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">                
                 <li class='dropdown'>

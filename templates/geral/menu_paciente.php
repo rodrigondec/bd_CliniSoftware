@@ -16,7 +16,7 @@
         <div id='navbar' class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 <li><a href="<?php echo SISTEMA; ?>/visualizar_agenda">Minha Agenda</a></li>
-                <li><a href="<?php echo PACIENTE; ?>/escolher_especialidade">Marcar Consulta</a></li>
+                <li><a href="<?php echo SISTEMA; ?>/escolher_especialidade">Marcar Consulta</a></li>
                 <li><a href="<?php echo SISTEMA; ?>/visualizar_historico">Meu Histórico</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">                

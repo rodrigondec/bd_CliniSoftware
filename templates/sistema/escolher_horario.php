@@ -9,7 +9,12 @@
     // var_dump($horarios);echo '<br><br>';
 ?>
 <div class='container col-lg-3 center'>
-    <form method='post' action='<?php echo PACIENTE.'/registrar_consulta' ?>'>
+<?php if(isset($_SESSION['idpaciente'])): ?>
+    <form method='post' action='<?php echo SISTEMA.'/registrar_consulta' ?>'>
+<?php endif; ?>
+<?php if(isset($_SESSION['idrecepcionista'])): ?>
+    <form method='post' action='<?php echo SISTEMA.'/escolher_paciente' ?>'>
+<?php endif; ?>
         <input type="text" name='idmedico' value='<?php echo $medico["idmedico"]; ?>' hidden />
         <div class='form-group col-lg-12'>
             <label for='data'>Data</label>
@@ -30,7 +35,7 @@
         </div>
         <div class='text-center col-lg-12'>
             <button class='btn btn-danger' type='reset'>Apagar</button>
-            <button class='btn btn-primary' type='submit'>Cadastrar</button>
+            <button class='btn btn-primary' type='submit'>Prosseguir</button>
         </div>
     </form>
 </div>
