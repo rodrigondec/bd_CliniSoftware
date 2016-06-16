@@ -89,6 +89,7 @@
                         </li>
                     </ul> 
                 </li>
+                <li><a href="<?php echo ADMINISTRADOR; ?>/listar_pessoas">Listar Pessoas</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">                
                 <li class='dropdown'>
