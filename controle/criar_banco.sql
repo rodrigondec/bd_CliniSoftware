@@ -109,7 +109,6 @@ create table especializado(
 
 create table mercancia(
 	idmercancia int not null auto_increment,
-	nome varchar(15) not null,
 	primary key(idmercancia)
 );
 
@@ -212,17 +211,17 @@ insert into gerencia (idrecepcionista, idmedico) values (1, 1);
 
 insert into paciente (idpessoa) values (4);
 
-insert into mercancia (nome) values ('consulta'), ('produto'), ('procedimento');
+insert into mercancia () values (), (), (), (), ();
 
-insert into consulta (hora, data, preco, idmercancia) values ('10:50', '2016-06-25', 120.00, 1) ,('10:50', '2016-06-10', 120.00, 1), ('10:50', '2016-06-20', 120.00, 1);
+insert into consulta (hora, data, preco, idmercancia) values ('10:50', '2016-06-25', 120.00, 1) ,('10:50', '2016-06-10', 120.00, 2), ('10:50', '2016-06-20', 120.00, 3);
 
 insert into agenda (idpaciente, idmedico, idconsulta) values (1, 1, 1), (1, 1, 2), (1, 1, 3);
 
 insert into ocorrencia_medica (idpaciente, data, diagnostico) values (1, '2016-06-10', 'Frescurite aguda');
 
-insert into produto (idmercancia, nome, preco) values (2 ,'seringa', 1.50);
+insert into produto (idmercancia, nome, preco) values (4 ,'seringa', 1.50);
 
-insert into procedimento (idmercancia, nome, preco) values (3, 'exame de sangue', 15.75);
+insert into procedimento (idmercancia, nome, preco) values (5, 'exame de sangue', 15.75);
 
 insert into inclui(idprocedimento, idproduto) values (1, 1);
 
