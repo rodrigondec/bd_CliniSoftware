@@ -25,9 +25,14 @@
 </div>
 <?php  
 	if(count($_POST) > 0){
+		run('insert into mercancia () values ();');
+		$idmercancia = run_select('select max(idmercancia) from mercancia;')['max(idmercancia)'];
+
 		$dados['nome'] = $_POST['nome'];
 		$dados['preco'] = $_POST['preco'];
-		$dados['idmercancia'] = run_select('select idmercancia from mercancia where nome=\'produto\';')['idmercancia'];
+		$dados['idmercancia'] = $idmercancia;
+
+		// var_dump($dados);
 
 		insert($dados, 'produto');
 		
