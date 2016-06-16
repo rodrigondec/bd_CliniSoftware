@@ -14,7 +14,7 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div id='navbar' class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li><a href="/<?php echo BASE; ?>admin">PHPMyAdmin</a></li>
+                <!-- <li><a href="/<?php echo BASE; ?>admin">PHPMyAdmin</a></li> -->
                 <li class='dropdown'>
                     <a href="#" class='dropdown-toggle' data-toggle='dropdown'>Funcionário<span class="caret"></span></a>
                     <ul class='dropdown-menu'>
