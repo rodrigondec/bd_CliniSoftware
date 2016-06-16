@@ -70,7 +70,7 @@ create table recepcionista(
 create table medico(
 	idmedico int not null auto_increment,
     idfuncionario int not null,
-    preco_padrao float,
+    preco_padrao float not null,
     cadastro_unico int not null default 1,
     ativo boolean not null default 1,
     primary key(idmedico),
@@ -206,7 +206,15 @@ insert into administrador (idfuncionario) values (1);
 
 insert into recepcionista (idfuncionario) values (3);
 
-insert into medico (idfuncionario) values (2);
+insert into medico (idfuncionario, preco_padrao) values (2, 100.00);
+
+insert into expediente (hora_inicial_expediente, hora_final_expediente, dia_semana, hora_inicial_intervalo, hora_final_intervalo) values 
+	('07:15', '17:45', 'Segunda-Feira', '12:00', '14:00');
+
+insert into expediente (hora_inicial_expediente, hora_final_expediente, dia_semana) values 
+	('08:00', '11:30', 'Terça-Feira');
+
+insert into trabalha (idfuncionario, idexpediente) values (1, 1), (2, 2), (3, 1);
 
 insert into gerencia (idrecepcionista, idmedico) values (1, 1);
 
@@ -214,7 +222,7 @@ insert into paciente (idpessoa) values (4);
 
 insert into mercancia () values (), (), (), (), ();
 
-insert into consulta (hora, data, preco, idmercancia) values ('10:50', '2016-06-25', 120.00, 1) ,('10:50', '2016-06-10', 120.00, 2), ('10:50', '2016-06-20', 120.00, 3);
+insert into consulta (idexpediente, data, preco, idmercancia) values (2, '2016-06-28', 120.00, 1) ,(2, '2016-06-07', 120.00, 2), (2, '2016-06-21', null, 3);
 
 insert into agenda (idpaciente, idmedico, idconsulta) values (1, 1, 1), (1, 1, 2), (1, 1, 3);
 
@@ -230,8 +238,4 @@ insert into especialidade (nome) values ('Neurologista');
 
 insert into especializado (idmedico, idespecialidade) values (1, 1);
 
-insert into expediente (hora_inicial_expediente, hora_final_expediente, dia_semana, hora_inicial_intervalo, hora_final_intervalo) values 
-	('07:15', '17:45', 'Segunda-Feira', '12:00', '14:00');
 
-insert into expediente (hora_inicial_expediente, hora_final_expediente, dia_semana) values 
-	('08:00', '11:30', 'Terça-Feira');
