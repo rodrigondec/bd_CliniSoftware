@@ -1,17 +1,25 @@
 <div class='text-center'>
 	<h2>Marcar Consulta</h2>
-	<h6> Escolher Especialidade</h6>
 	<hr />
 </div>
-
+<?php  
+	$especialidades = run_select_many('select * from especialidade;');
+	var_dump($especialidades);
+?>
 <div class='container col-lg-5 center'>
 	<form method='post' action='<?php echo PACIENTE."/escolher_medico" ?>'>
 		<div class='form-group col-lg-12'>
-		    <label for=''>Especialidade: </label>
-		    <input type='text' name='nome' class='form-control' placeholder='Digite a especialidade que deseja marcar a consulta'  required />
+		    <label for='especialidade'>Especialidade</label>
+		    <select class='form-control' name="idespecialidade" required>
+		    	<option value="" selected disabled>Selecione uma especialidade</option>
+		    	<?php foreach($especialidades as $index => $especialidade): ?>
+				<option value="<?php echo $especialidade['idespecialidade']; ?>">
+					<?php echo $especialidade['nome']; ?>
+				</option>
+				<?php endforeach; ?>
+		    </select>
 		</div>
-		
-		<div class='text-center'>
+		<div class='text-center col-lg-12'>
 			<button class='btn btn-danger' type='reset'>Apagar</button>
             <button class='btn btn-primary' type='submit'>Buscar médicos</button>
 		</div>
