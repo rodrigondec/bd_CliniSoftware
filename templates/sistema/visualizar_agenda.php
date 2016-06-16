@@ -7,13 +7,13 @@
 		// var_dump($_SESSION);
 		if(isset($_SESSION['idpaciente'])){
 			// echo '<h3 class="text-center">Sou um paciente</h3>';
-			$agenda = run_select_many('select idconsulta, hora_inicial_expediente, hora_final_expediente, data, preco, nome as nome_medico from agenda natural join expediente natural join consulta natural join pessoa natural join funcionario natural join medico where agenda.idpaciente='.$_SESSION['idpaciente'].' and data > \''.date('Y-m-d').'\' order by data;');
+			$agenda = run_select_many('select idconsulta, hora_inicial_expediente, hora_final_expediente, data, preco, nome as nome_medico from agenda natural join expediente natural join consulta natural join pessoa natural join funcionario natural join medico where agenda.idpaciente='.$_SESSION['idpaciente'].' and data >= \''.date('Y-m-d').'\' order by data;');
 			// var_dump($agenda);
 			$ignorar_paciente = true;
 		}
 		else if(isset($_SESSION['idmedico'])){
 			// echo '<h3 class="text-center">Sou um medico</h3>';
-			$agenda = run_select_many('select idconsulta, hora_inicial_expediente, hora_final_expediente, data, preco, nome as nome_paciente from agenda natural join expediente natural join consulta natural join pessoa natural join paciente where agenda.idmedico='.$_SESSION['idmedico'].' and data > \''.date('Y-m-d').'\' order by data;');
+			$agenda = run_select_many('select idconsulta, hora_inicial_expediente, hora_final_expediente, data, preco, nome as nome_paciente from agenda natural join expediente natural join consulta natural join pessoa natural join paciente where agenda.idmedico='.$_SESSION['idmedico'].' and data >= \''.date('Y-m-d').'\' order by data;');
 			// var_dump($agenda);
 			$ignorar_medico = true;
 		}
@@ -27,7 +27,7 @@
                 $pessoa = 'p2';
             }
     
-			$agenda = run_select_many('select idconsulta, hora_inicial_expediente, hora_final_expediente, data, preco, p1.nome as nome_paciente, p2.nome as nome_medico from pessoa as p1 natural join paciente, agenda natural join expediente natural join consulta, pessoa as p2 natural join funcionario as f2 natural join medico where '.$pessoa.'.email=\''.$_POST['email'].'\' and consulta.data > \''.date('Y-m-d').'\' and paciente.idpaciente=agenda.idpaciente and medico.idmedico=agenda.idmedico order by data;');
+			$agenda = run_select_many('select idconsulta, hora_inicial_expediente, hora_final_expediente, data, preco, p1.nome as nome_paciente, p2.nome as nome_medico from pessoa as p1 natural join paciente, agenda natural join expediente natural join consulta, pessoa as p2 natural join funcionario as f2 natural join medico where '.$pessoa.'.email=\''.$_POST['email'].'\' and consulta.data >= \''.date('Y-m-d').'\' and paciente.idpaciente=agenda.idpaciente and medico.idmedico=agenda.idmedico order by data;');
 		}
 ?>
 <div class="table-responsive container center col-lg-8">
