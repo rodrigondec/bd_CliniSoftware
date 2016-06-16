@@ -7,7 +7,7 @@
 	var_dump($especialidades);
 ?>
 <div class='container col-lg-5 center'>
-	<form method='post' action='<?php echo PACIENTE."/escolher_medico" ?>'>
+	<form method='post' action='<?php echo SISTEMA."/escolher_medico" ?>'>
 		<div class='form-group col-lg-12'>
 		    <label for='especialidade'>Especialidade</label>
 		    <select class='form-control' name="idespecialidade" required>
@@ -21,12 +21,7 @@
 		</div>
 		<div class='text-center col-lg-12'>
 			<button class='btn btn-danger' type='reset'>Apagar</button>
-            <button class='btn btn-primary' type='submit'>Buscar médicos</button>
+            <button class='btn btn-primary' type='submit'>Prosseguir</button>
 		</div>
 	</form>
 </div>
-<?php  
-	
-
-
-?>
