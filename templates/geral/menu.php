@@ -16,16 +16,16 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li class="hidden">
-                    <a href="#page-top"></a>
+                    <a href="/<?php echo BASE; ?>#page-top"></a>
                 </li>
                 <li class="page-scroll">
-                    <a href="#portfolio">Entrar</a>
+                    <a href="/<?php echo BASE; ?>#portfolio">Entrar</a>
                 </li>
                 <li class="page-scroll">
-                    <a href="#about">Sobre</a>
+                    <a href="/<?php echo BASE; ?>#about">Sobre</a>
                 </li>
                 <li class="page-scroll">
-                    <a href="#contact">Contato</a>
+                    <a href="/<?php echo BASE; ?>#contact">Contato</a>
                 </li>
             </ul>
         </div>
